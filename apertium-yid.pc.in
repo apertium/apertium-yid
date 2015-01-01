@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=${prefix}
+libdir=@libdir@
+dir=@libdir@/apertium/apertium-yid
+srcdir=@datarootdir@/apertium/apertium-yid
+
+Name: apertium-yid
+Description: Finite-state morphological transducer and constraint grammar for Yiddish 
+Version: @VERSION@
+
