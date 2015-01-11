@@ -7,18 +7,23 @@ Multichar_Symbols
 %<pl%>   ! Plural
 %<sg%>   ! Singular
 
+! gender: for nouns, determiners, adjectives, etc.
 %<m%>    ! masculine
 %<f%>    ! feminine
 %<nt%>   ! neuter
 
+! other parts of speech
 %<det%>  ! determiner
 
+! cases: for determiners, etc.
 %<nom%>  ! nominative
 %<acc%>  ! accusative
 %<dat%>  ! dative
 
+! Escaped characters
 
-%{ь%}    ! used for umlaut of previous vowel
+%{ь%}    ! used for umlaut of ~previous vowel
+%>       ! morpheme boundary
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
@@ -45,14 +50,17 @@ LEXICON N-F-UML
 LEXICON N-M-UML-ER
 
 %<n%>%<m%>%<sg%>: # ;
+%<n%>%<m%>%<pl%>:%>%{ь%}ער # ;
 
 LEXICON N-F-UML-ER
 
 %<n%>%<f%>%<sg%>: # ;
+%<n%>%<f%>%<pl%>:%>%{ь%}ער # ;
 
 LEXICON N-N-UML-ER
 
 %<n%>%<nt%>%<sg%>: # ;
+%<n%>%<nt%>%<pl%>:%>%{ь%}ער # ;
 
 LEXICON N-M-S
 
@@ -61,14 +69,17 @@ LEXICON N-M-S
 LEXICON N-F-S
 
 %<n%>%<f%>%<sg%>: # ;
+%<n%>%<f%>%<pl%>:%>ס # ;
 
 LEXICON N-N-S
 
 %<n%>%<nt%>%<sg%>: # ;
+%<n%>%<nt%>%<pl%>:%>ס # ;
 
 LEXICON N-M-N
 
 %<n%>%<m%>%<sg%>: # ;
+%<n%>%<m%>%<pl%>:%>ס # ;
 
 LEXICON N-F-N
 
@@ -130,6 +141,7 @@ LEXICON DET-DEF-PL
 LEXICON NounRoot
 
 הױז:הױז N-N-UML-ER ; ! "house"
+אַרבעט:אַרבעט N-F-S ; ! "work"
 
 LEXICON DetRoot
 

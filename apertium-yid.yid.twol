@@ -1,12 +1,12 @@
 Alphabet
- A B Ç D E Ä F G H I J Ž K L M N Ň O Ö P R S Ş T U Ü W Y Ý Z
- a b ç d e ä f g h i j ž k l m n ň o ö p r s ş t u ü w y ý z
- %{A%}:a %>:0  ;
+ ·ּ ־ א אַ אָ ב בֿ ג ד ה ו וּ ז ח חּ ט י יִ ך כ כּ ל ם מ ן נ ס ע ף פ פּ פֿ ץ צ ק ר ש שׂ ת תּ װ ױ ײ ײַ ׳ ״
+ %{ь%}:0 %>:0  ;
 
 Sets
 
-Vowel = A E Ä I O Ö U Ü Y Ý 
-        a e ä i o ö u ü y ý ;
+Vowel = א אַ אָ יִ י ו וּ ע ױ ײ ײַ ;
+
+Cons = ב בֿ ג ד ה ז ח חּ ט י ך כ כּ ל ם מ ן נ ס ף פ פּ פֿ ץ צ ק ר ש שׂ ת תּ װ ;
 
 Rules 
 
@@ -20,3 +20,12 @@ i:0 <=> Vow %{VSUF%}:0 _ [ m | n ] ;
 ! http://wiki.apertium.org/wiki/Twol
 ! http://wiki.apertium.org/wiki/Hfst
 
+!!!!!!!! UMLAUT RULES !!!!!!!!
+
+"Main vowel umlaut rule, for plural forms"
+Vx:Vy <=> _ :Cons* %>: %{ь%}:0 ;
+      where
+          Vx in ( א אַ אָ יִ י ו וּ ע ױ ײ ײַ )
+          Vy in ( ע ע ע יִ י י י ע ײַ ײ ײַ )
+          !!! FIXME: ױ sometimes → ײ
+      matched ;
