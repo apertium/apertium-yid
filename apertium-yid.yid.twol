@@ -4,7 +4,7 @@ Alphabet
 
 Sets
 
-Vowel = א אַ אָ יִ י ו וּ ע ױ ײ ײַ %{ױ%} ;
+Vowel = אַ אָ יִ י ו וּ ע ױ ײ ײַ %{ױ%} ;
 
 Cons = בּ בֿ ג ד ה ז ח חּ ט י ך כ כּ ל ם מ ן נ ס ף פ פּ פֿ ץ צ ק ר ש שׂ ת תּ װ ;
 
@@ -32,10 +32,10 @@ Cx:Cy <=> _ :0* [ :Cons | :Vowel ] ;
 
 
 "Umlaut first vowel of words if {ь} occurs later in word"
-Vx:Vy <=> _ [ :Cons | :Vowel | [ :0 - %{ь%}: ] ]* %{ь%}:0 ;
+Vx:Vy <=> .#. :Cons* _ [ :Cons | :Vowel | [ :0 - %{ь%}: ] ]* %{ь%}:0 ;
       where
-           Vx in ( ױ אַ אָ ו וּ %{ױ%} )
-           Vy in ( ײַ ע ע י י ײ )
+           Vx in ( ױ א אַ אָ ו וּ %{ױ%} )
+           Vy in ( ײַ ע ע ע י י ײ )
       matched ;
 
 ! Resources:

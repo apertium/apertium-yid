@@ -48,11 +48,13 @@ DetRoot ;
 
 LEXICON N-M-UML
 
-%<n%>%<m%>%<sg%>:%{ь%} # ;
+%<n%>%<m%>%<sg%>: # ;
+%<n%>%<m%>%<pl%>:%{ь%} # ;
 
 LEXICON N-F-UML
 
-%<n%>%<f%>%<sg%>:%{ь%} # ;
+%<n%>%<f%>%<sg%>: # ;
+%<n%>%<f%>%<pl%>:%{ь%} # ;
 
 LEXICON N-M-UML-ER
 
@@ -150,6 +152,7 @@ LEXICON NounRoot
 הױז:הױז N-N-UML-ER ; ! "house" plural with ײַ
 בּױם:בּ%{ױ%}ם N-M-UML-ER ; ! "tree" plural with ײ
 אַרבעט:אַרבעט N-F-S ; ! "work"
+בּאַרג:בּאַרג N-M-UML ; ! "mountain"
 
 LEXICON DetRoot
 
