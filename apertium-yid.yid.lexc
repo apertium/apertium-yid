@@ -24,6 +24,13 @@ Multichar_Symbols
 
 %{ь%}    ! used for umlaut of ~previous vowel
 %>       ! morpheme boundary
+%{ױ%}    ! for ױ to ײ umlaut correspondence
+
+! Regular umlaut correspondences:
+! ו - י
+! אָ - ע
+! ױ - ײ/ײַ
+! אַ - ע
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
@@ -41,11 +48,11 @@ DetRoot ;
 
 LEXICON N-M-UML
 
-%<n%>%<m%>%<sg%>: # ;
+%<n%>%<m%>%<sg%>:%{ь%} # ;
 
 LEXICON N-F-UML
 
-%<n%>%<f%>%<sg%>: # ;
+%<n%>%<f%>%<sg%>:%{ь%} # ;
 
 LEXICON N-M-UML-ER
 
@@ -140,7 +147,8 @@ LEXICON DET-DEF-PL
 
 LEXICON NounRoot
 
-הױז:הױז N-N-UML-ER ; ! "house"
+הױז:הױז N-N-UML-ER ; ! "house" plural with ײַ
+בּױם:בּ%{ױ%}ם N-M-UML-ER ; ! "tree" plural with ײ
 אַרבעט:אַרבעט N-F-S ; ! "work"
 
 LEXICON DetRoot
