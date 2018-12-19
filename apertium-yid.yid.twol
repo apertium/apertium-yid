@@ -30,8 +30,6 @@ Vx:Vy <=> .#. :Cons* _ [ :Cons | :Vowel | [ :0 - %{ь%}: ] ]* %{ь%}:0 ;
       matched ;
 
 
-!"Umlaut first vowel of words if {ь} occurs later in word simple version"
-!אַ:ע <=> .#. :Cons* _ [ :Cons | :Vowel ]* %{ь%}:0 ;
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol
