@@ -12,7 +12,7 @@ Cons = א בּ בֿ ג ד ה ז ח חּ ט י ך כ כּ ל ם מ ן נ ס ף פ
 
 Rules 
 
-!!!!!!!! PHONOLOGICAL RULES !!!!!!!!
+!!!!!!!! ORTHOGRAPHIC RULES !!!!!!!!
 
 "Change final letters to non-final when not word-final"
 Cx:Cy <=> _ :0* [ :Cons | :Vowel ] ;
