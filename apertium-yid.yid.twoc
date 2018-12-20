@@ -1,8 +1,8 @@
 Alphabet
 
 ! Past participle
-%[%+pp%]
-%[%-pp%]
+%[%+pp%]:0
+%[%-pp%]:0
 
 ;
 

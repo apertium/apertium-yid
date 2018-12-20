@@ -57,6 +57,8 @@ Multichar_Symbols
 כּ
 כֿ
 ךֿ
+פֿ
+פּ
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
@@ -172,16 +174,43 @@ LEXICON DET-DEF-PL
 
 LEXICON V-REG
 
-%<v%>%<inf%>:ן # ;
+%<v%>%<inf%>:%>ן # ;
 
 %<v%>%<pres%>%<p1%>%<sg%>: # ;
-%<v%>%<pres%>%<p2%>%<sg%>:סט # ;
-%<v%>%<pres%>%<p3%>%<sg%>:ט # ;
-%<v%>%<pres%>%<p1%>%<pl%>:ן # ;
-%<v%>%<pres%>%<p2%>%<pl%>:ט # ;
-%<v%>%<pres%>%<p3%>%<pl%>:ן # ;
+%<v%>%<pres%>%<p2%>%<sg%>:%>סט # ;
+%<v%>%<pres%>%<p3%>%<sg%>:%>ט # ;
+%<v%>%<pres%>%<p1%>%<pl%>:%>ן # ;
+%<v%>%<pres%>%<p2%>%<pl%>:%>ט # ;
+%<v%>%<pres%>%<p3%>%<pl%>:%>ן # ;
 
-%<v%>%<pp%>:ט # ;
+%<v%>%<pp%>%[%+pp%]:%>ט # ;
+
+LEXICON V-REG-NOPREF
+
+%<v%>%<inf%>:%>ן # ;
+
+%<v%>%<pres%>%<p1%>%<sg%>: # ;
+%<v%>%<pres%>%<p2%>%<sg%>:%>סט # ;
+%<v%>%<pres%>%<p3%>%<sg%>:%>ט # ;
+%<v%>%<pres%>%<p1%>%<pl%>:%>ן # ;
+%<v%>%<pres%>%<p2%>%<pl%>:%>ט # ;
+%<v%>%<pres%>%<p3%>%<pl%>:%>ן # ;
+
+%<v%>%<pp%>:%>ט # ;
+
+LEXICON V-STRONG-7
+
+%<v%>%<inf%>:%>ן # ;
+
+%<v%>%<pres%>%<p1%>%<sg%>: # ;
+%<v%>%<pres%>%<p2%>%<sg%>:%>סט # ;
+%<v%>%<pres%>%<p3%>%<sg%>:%>ט # ;
+%<v%>%<pres%>%<p1%>%<pl%>:%>ן # ;
+%<v%>%<pres%>%<p2%>%<pl%>:%>ט # ;
+%<v%>%<pres%>%<p3%>%<pl%>:%>ן # ;
+
+%<v%>%<pp%>%[%+pp%]:%>ן # ;
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
@@ -202,14 +231,15 @@ LEXICON DetRoot
 די: DET-DEF-PL ; ! "the"
 
 LEXICON VerbRoot
-גע: VerbStems ; ! past participle
+%[%-pp%]:גע VerbStems ; ! past participle
 VerbStems ; ! other forms
 
 
 LEXICON VerbStems
 
 קױפֿן:קױפֿ V-REG ;
-פֿאַרלירן:פֿאַרליר V-REG ;
+פֿאַרלירן:פֿאַרליר V-REG-NOPREF ;
+בּעטן:בּעט V-STRONG-7 ;
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon

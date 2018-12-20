@@ -12,12 +12,29 @@ Cons = א בּ בֿ ג ד ה ז ח חּ ט י ך כ כּ ל ם מ ן נ ס ף פ
 
 Rules 
 
+!!!!!!!! PHONOLOGICAL RULES !!!!!!!!
+
 "Change final letters to non-final when not word-final"
 Cx:Cy <=> _ :0* [ :Cons | :Vowel ] ;
       where
           Cx in ( ם ן ך ף ץ )
           Cy in ( מ נ כ פ צ )
       matched ;
+
+"Change non-final letters to non-final when word-final"
+Cx:Cy <=> _ .#. ;
+      where
+          Cx in ( מ נ כ פ פֿ צ )
+          Cy in ( ם ן ך ף ף ץ )
+      matched ;
+
+
+
+!!!!!!!! CONSONANT RULES !!!!!!!!
+
+"Delete final ט of verb stems when ט follows"
+ט:0 <=> _ %>: :ט .#. ;
+
 
 !!!!!!!! UMLAUT RULES !!!!!!!!
 
