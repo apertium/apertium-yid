@@ -4,6 +4,11 @@ Multichar_Symbols
 
 ! Part of speech categories
 %<n%>    ! Noun
+%<v%>    ! Verb
+%<det%>  ! determiner
+%<prn%>  ! pronoun
+
+! number: for nouns, verbs, adjectives, determiners, etc.
 %<pl%>   ! Plural
 %<sg%>   ! Singular
 
@@ -12,13 +17,20 @@ Multichar_Symbols
 %<f%>    ! feminine
 %<nt%>   ! neuter
 
-! other parts of speech
-%<det%>  ! determiner
+! person
+%<p1%>
+%<p2%>
+%<p3%>
 
 ! cases: for determiners, etc.
 %<nom%>  ! nominative
 %<acc%>  ! accusative
 %<dat%>  ! dative
+
+! verb forms
+%<inf%>  ! infinitive
+%<pres%> ! present
+%<pp%>   ! past participle
 
 ! Escaped characters
 
@@ -26,13 +38,25 @@ Multichar_Symbols
 %>       ! morpheme boundary
 %{ױ%}    ! for ױ to ײ umlaut correspondence
 
+! matched features
+%[%+pp%] ! past participle
+%[%-pp%] ! past participle
+
 ! Regular umlaut correspondences:
 ! ו - י
 ! אָ - ע
 ! ױ - ײ/ײַ
 ! אַ - ע
 אַ
+אָ
+ײַ
+יִ
+וּ
 בּ
+בֿ
+כּ
+כֿ
+ךֿ
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
@@ -42,6 +66,7 @@ LEXICON Root
 
 NounRoot ;
 DetRoot ;
+VerbRoot ;
 
 
 !!! Format for noun lexica is N-[gender]-[class]
@@ -145,6 +170,19 @@ LEXICON DET-DEF-PL
 %<det%>%<pl%>%<acc%>:די # ;
 %<det%>%<pl%>%<dat%>:די # ;
 
+LEXICON V-REG
+
+%<v%>%<inf%>:ן # ;
+
+%<v%>%<pres%>%<p1%>%<sg%>: # ;
+%<v%>%<pres%>%<p2%>%<sg%>:סט # ;
+%<v%>%<pres%>%<p3%>%<sg%>:ט # ;
+%<v%>%<pres%>%<p1%>%<pl%>:ן # ;
+%<v%>%<pres%>%<p2%>%<pl%>:ט # ;
+%<v%>%<pres%>%<p3%>%<pl%>:ן # ;
+
+%<v%>%<pp%>:ט # ;
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -162,6 +200,16 @@ LEXICON DetRoot
 די: DET-DEF-F ; ! "the"
 דאָס: DET-DEF-N ; ! "the"
 די: DET-DEF-PL ; ! "the"
+
+LEXICON VerbRoot
+גע: VerbStems ; ! past participle
+VerbStems ; ! other forms
+
+
+LEXICON VerbStems
+
+קױפֿן:קױפֿ V-REG ;
+פֿאַרלירן:פֿאַרליר V-REG ;
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon

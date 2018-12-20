@@ -1,0 +1,14 @@
+Alphabet
+
+אַ:א
+בֿ:ב
+בּ:ב
+יִ:י
+וּ:ו
+
+ ;
+
+Rules
+
+"Unify spellings"
+a => _ ;

@@ -1,0 +1,27 @@
+Alphabet
+
+! Past participle
+%[%+pp%]
+%[%-pp%]
+
+;
+
+
+
+Rules
+
+"Match prefix"
+Sx:0 /<= _ ;
+   except
+       _ (:*) Sy:0 ;
+   where Sx in ( %[%-pp%] )
+         Sy in ( %[%+pp%] )
+   matched ;
+
+"Inverse of Match prefix for use with mismatched tags"
+Sx:0 /<= _ ;
+   except
+       Sy:0 :* _ ;
+   where Sy in ( %[%-pp%] )
+         Sx in ( %[%+pp%] )
+matched ;
