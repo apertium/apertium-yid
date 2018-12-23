@@ -152,27 +152,27 @@ LEXICON N-F-HEB
 
 LEXICON DET-DEF-M
 
-%<det%>%<m%>%<nom%>:דער # ;
-%<det%>%<m%>%<acc%>:דעם # ;
-%<det%>%<m%>%<dat%>:דעם # ;
+%<det%>%<m%>%<nom%>:ער # ;
+%<det%>%<m%>%<acc%>:עם # ;
+%<det%>%<m%>%<dat%>:עם # ;
 
 LEXICON DET-DEF-F
 
-%<det%>%<f%>%<nom%>:די # ;
-%<det%>%<f%>%<acc%>:די # ;
-%<det%>%<f%>%<dat%>:דער # ;
+%<det%>%<f%>%<nom%>:י # ;
+%<det%>%<f%>%<acc%>:י # ;
+%<det%>%<f%>%<dat%>:ער # ;
 
 LEXICON DET-DEF-N
 
-%<det%>%<nt%>%<nom%>:דאָס # ;
-%<det%>%<nt%>%<acc%>:דאָס # ;
-%<det%>%<nt%>%<dat%>:דעם # ;
+%<det%>%<nt%>%<nom%>:אָס # ;
+%<det%>%<nt%>%<acc%>:אָס # ;
+%<det%>%<nt%>%<dat%>:עם # ;
 
 LEXICON DET-DEF-PL
 
-%<det%>%<pl%>%<nom%>:די # ;
-%<det%>%<pl%>%<acc%>:די # ;
-%<det%>%<pl%>%<dat%>:די # ;
+%<det%>%<pl%>%<nom%>:י # ;
+%<det%>%<pl%>%<acc%>:י # ;
+%<det%>%<pl%>%<dat%>:י # ;
 
 LEXICON DET-INDEF
 %<det%>%<sg%>: # ;
@@ -229,10 +229,10 @@ LEXICON NounRoot
 
 LEXICON DetRoot
 
-דער: DET-DEF-M ; ! "the"
-די: DET-DEF-F ; ! "the"
-דאָס: DET-DEF-N ; ! "the"
-די: DET-DEF-PL ; ! "the"
+דער:ד DET-DEF-M ; ! "the"
+די:ד DET-DEF-F ; ! "the"
+דאָס:ד DET-DEF-N ; ! "the"
+די:ד DET-DEF-PL ; ! "the"
 אַ:אַ DET-INDEF ; ! "a"
 
 LEXICON VerbRoot
