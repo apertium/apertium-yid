@@ -9,6 +9,10 @@ Multichar_Symbols
 %<prn%>  ! pronoun
 %<cnjcoo%> ! coordinating conjunction
 %<pr%>   ! preposition
+%<prn%>  ! pronoun
+
+! types of pronouns
+%<pers%> ! personal
 
 ! number: for nouns, verbs, adjectives, determiners, etc.
 %<pl%>   ! Plural
@@ -24,7 +28,7 @@ Multichar_Symbols
 %<p2%>
 %<p3%>
 
-! cases: for determiners, etc.
+! cases: for determiners, pronouns, etc.
 %<nom%>  ! nominative
 %<acc%>  ! accusative
 %<dat%>  ! dative
@@ -265,6 +269,44 @@ LEXICON PREP
 
 %<pr%>: # ;
 
+LEXICON PRON-P1-SG
+איך:איך%<prn%>%<pers%>%<p1%>%<sg%>%<nom%> # ;
+איך:מיך%<prn%>%<pers%>%<p1%>%<sg%>%<acc%> # ;
+איך:מיר%<prn%>%<pers%>%<p1%>%<sg%>%<dat%> # ;
+
+LEXICON PRON-P2-SG
+דו:דו%<prn%>%<pers%>%<p2%>%<sg%>%<nom%> # ;
+דו:דיך%<prn%>%<pers%>%<p2%>%<sg%>%<acc%> # ;
+דו:דיר%<prn%>%<pers%>%<p2%>%<sg%>%<dat%> # ;
+
+LEXICON PRON-P3-SG
+ער:ער%<prn%>%<pers%>%<p3%>%<sg%>%<m%>%<nom%> # ;
+ער:אים%<prn%>%<pers%>%<p3%>%<sg%>%<m%>%<acc%> # ;
+ער:אים%<prn%>%<pers%>%<p3%>%<sg%>%<m%>%<dat%> # ;
+
+זי:זי%<prn%>%<pers%>%<p3%>%<sg%>%<f%>%<nom%> # ;
+זי:זי%<prn%>%<pers%>%<p3%>%<sg%>%<f%>%<acc%> # ;
+זי:איר%<prn%>%<pers%>%<p3%>%<sg%>%<f%>%<dat%> # ;
+
+עס:עס%<prn%>%<pers%>%<p3%>%<sg%>%<nt%>%<nom%> # ;
+עס:עס%<prn%>%<pers%>%<p3%>%<sg%>%<nt%>%<acc%> # ;
+עס:אים%<prn%>%<pers%>%<p3%>%<sg%>%<nt%>%<dat%> # ;
+
+LEXICON PRON-P1-PL
+מיר:מיר%<prn%>%<pers%>%<p1%>%<pl%>%<nom%> # ;
+מיר:אונדז%<prn%>%<pers%>%<p1%>%<pl%>%<acc%> # ;
+מיר:אונדז%<prn%>%<pers%>%<p1%>%<pl%>%<dat%> # ;
+
+LEXICON PRON-P2-PL
+איר:איר%<prn%>%<pers%>%<p2%>%<pl%>%<nom%> # ;
+איר:אײַך%<prn%>%<pers%>%<p2%>%<pl%>%<acc%> # ;
+איר:אײַך%<prn%>%<pers%>%<p2%>%<pl%>%<dat%> # ;
+
+LEXICON PRON-P3-PL
+זײ:זײ%<prn%>%<pers%>%<p3%>%<pl%>%<nom%> # ;
+זײ:זײ%<prn%>%<pers%>%<p3%>%<pl%>%<acc%> # ;
+זײ:זײ%<prn%>%<pers%>%<p3%>%<pl%>%<dat%> # ;
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
@@ -278,6 +320,7 @@ LEXICON Prepositions
 
 פֿון:פֿון PREP ; ! "of, from"
 
+
 LEXICON DetRoot
 
 דער:ד DET-DEF-M ; ! "the"
@@ -287,7 +330,14 @@ LEXICON DetRoot
 אַ:אַ DET-INDEF ; ! "a"
 !אַן:אַן DET-INDEF ; ! "an"
 
+LEXICON Pronouns
 
+PRON-P1-SG ;
+PRON-P2-SG ;
+PRON-P3-SG ;
+PRON-P1-PL ;
+PRON-P2-PL ;
+PRON-P3-PL ;
 
 LEXICON NounRoot
 
