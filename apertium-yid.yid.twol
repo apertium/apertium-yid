@@ -38,8 +38,9 @@ Cx:Cy <=> _ .#. ;
 
 !!!!!!!! VOWEL RULES !!!!!!!!
 
-"Epenthesise ע after ל and נ in plural ן suffix"
-%{ע%}:ע <=> [ :נ | :ל ]/:0 _ :ן ;
+"Epenthesise ע as needed"
+%{ע%}:ע <=> [ :נ | :ל ]/:0 _ :ן ;  ! after ל and נ in plural ן suffix
+            :ײַ/:0 _ :נ ;              ! after ײַ in pprs
 
 
 !!!!!!!! UMLAUT RULES !!!!!!!!
