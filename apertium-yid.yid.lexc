@@ -7,6 +7,7 @@ Multichar_Symbols
 %<v%>    ! Verb
 %<det%>  ! determiner
 %<prn%>  ! pronoun
+%<cnjcoo%> ! coordinating conjunction
 
 ! number: for nouns, verbs, adjectives, determiners, etc.
 %<pl%>   ! Plural
@@ -72,6 +73,7 @@ LEXICON Root
 NounRoot ;
 DetRoot ;
 VerbRoot ;
+Conjunctions ;
 
 
 !!! Format for noun lexica is N-[gender]-[class]
@@ -177,6 +179,7 @@ LEXICON DET-DEF-PL
 %<det%>%<pl%>%<dat%>:י # ;
 
 LEXICON DET-INDEF
+
 %<det%>%<sg%>: # ;
 ! FIXME: deal with alternate אַן
 
@@ -217,6 +220,10 @@ LEXICON V-STRONG-7
 V-COMMON ;
 %<v%>%<pp%>%[%+pp%]:%>ן # ;
 
+LEXICON CC
+
+%<cnjcoo%>: # ;
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
@@ -232,6 +239,10 @@ LEXICON NounRoot
 הימל:הימל N-M-N ; ! "heaven"
 לאַן:לאַן N-M-N ; ! "meadow"
 
+LEXICON Conjunctions
+
+און:און CC ; ! "and"
+
 LEXICON DetRoot
 
 דער:ד DET-DEF-M ; ! "the"
@@ -239,6 +250,7 @@ LEXICON DetRoot
 דאָס:ד DET-DEF-N ; ! "the"
 די:ד DET-DEF-PL ; ! "the"
 אַ:אַ DET-INDEF ; ! "a"
+!אַן:אַן DET-INDEF ; ! "an"
 
 LEXICON VerbRoot
 %[%-pp%]:גע VerbStems ; ! past participle
