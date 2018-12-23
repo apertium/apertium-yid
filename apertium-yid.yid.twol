@@ -2,7 +2,7 @@ Alphabet
  א אַ אָ בּ בֿ ג ד ה ו וּ ז ח חּ ט י יִ ך כ כּ ל ם מ ן נ ס ע ף פ פּ פֿ ץ צ ק ר ש שׂ ת תּ װ ױ ײ ײַ
  ׳ ״
  ·ּ ־ 
- %{ь%}:0 %>:0 %{ױ%}:ױ ;
+ %{ь%}:0 %>:0 %{ױ%}:ױ %{ע%}:0 ;
 
 Sets
 
@@ -34,6 +34,12 @@ Cx:Cy <=> _ .#. ;
 
 "Delete final ט of verb stems when ט follows"
 ט:0 <=> _ %>: :ט .#. ;
+
+
+!!!!!!!! VOWEL RULES !!!!!!!!
+
+"Epenthesise ע after ל and נ in plural ן suffix"
+%{ע%}:ע <=> [ :נ | :ל ]/:0 _ :ן ;
 
 
 !!!!!!!! UMLAUT RULES !!!!!!!!

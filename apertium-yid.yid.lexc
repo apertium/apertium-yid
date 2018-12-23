@@ -39,6 +39,7 @@ Multichar_Symbols
 %{ь%}    ! used for umlaut of ~previous vowel
 %>       ! morpheme boundary
 %{ױ%}    ! for ױ to ײ umlaut correspondence
+%{ע%}    ! ע or empty; in -{ע}ן is empty except after נ and ל
 
 ! matched features
 %[%+pp%] ! past participle
@@ -105,6 +106,7 @@ LEXICON N-N-UML-ER
 LEXICON N-M-S
 
 %<n%>%<m%>%<sg%>: # ;
+%<n%>%<m%>%<pl%>:%>ס # ;
 
 LEXICON N-F-S
 
@@ -119,7 +121,7 @@ LEXICON N-N-S
 LEXICON N-M-N
 
 %<n%>%<m%>%<sg%>: # ;
-%<n%>%<m%>%<pl%>:%>ס # ;
+%<n%>%<m%>%<pl%>:%>%{ע%}ן # ;
 
 LEXICON N-F-N
 
@@ -226,6 +228,9 @@ LEXICON NounRoot
 בּױם:בּ%{ױ%}ם N-M-UML-ER ; ! "tree" plural with ײ
 אַרבעט:אַרבעט N-F-S ; ! "work"
 בּאַרג:בּאַרג N-M-UML ; ! "mountain"
+יאָר:יאָר N-M-N ; ! "year"
+הימל:הימל N-M-N ; ! "heaven"
+לאַן:לאַן N-M-N ; ! "meadow"
 
 LEXICON DetRoot
 
