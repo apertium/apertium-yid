@@ -247,6 +247,10 @@ LEXICON V-STRONG-7
 V-COMMON ;
 %<v%>%<pp%>%[%+pp%]:%>ן # ;
 
+LEXICON V-ZAYN-ZE
+
+%<v%>%<pres%>%<p1%>%<pl%>:%>נען # ;
+%<v%>%<pres%>%<p3%>%<pl%>:%>נען # ;
 
 LEXICON V-ZAYN-ZAY
 
@@ -403,6 +407,7 @@ LEXICON IrregularVerbs
 זײַן:בי V-ZAYN-BI ;
 זײַן:איז V-ZAYN-IZ ;
 זײַן:װע V-ZAYN-VE ;
+זײַן:זע V-ZAYN-ZE ; ! Dir/LR
 
 האָבן:האָב V-HOBN-HOB ;
 האָבן:האַ V-HOBN-HO ;
