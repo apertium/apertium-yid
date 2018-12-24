@@ -5,13 +5,18 @@ Multichar_Symbols
 ! Part of speech categories
 %<n%>    ! Noun
 %<v%>    ! Verb
+%<vaux%> ! Auxiliary
 %<det%>  ! determiner
 %<prn%>  ! pronoun
 %<cnjcoo%> ! coordinating conjunction
 %<pr%>   ! preposition
+%<det%>  ! determiner
 
-! types of pronouns
+! types of pronouns and determiners
 %<pers%> ! personal
+%<pos%>  ! personal possessive
+%<att%>  ! attributive ("prepositive")
+%<pred%> ! predicative ("postpositive", nominalised)
 
 ! number: for nouns, verbs, adjectives, determiners, etc.
 %<pl%>   ! Plural
@@ -21,6 +26,7 @@ Multichar_Symbols
 %<m%>    ! masculine
 %<f%>    ! feminine
 %<nt%>   ! neuter
+%<mfn%>  ! masculine/feminine/neuter
 
 ! person
 %<p1%>   ! 1st person
@@ -40,10 +46,25 @@ Multichar_Symbols
 %<pprs%> ! present participle
 %<imp%>  ! imperative
 
+! Punctuation
+%<percent%>   ! Percent
+%<sent%>      ! Sentence marker
+%<guio%>      ! Hyphen
+%<cm%>        ! Comma
+%<apos%>      ! Apostrophe
+%<rquot%>     ! Quote marker (right hand side)
+%<lquot%>     ! Quote marker (left hand side)
+%<rpar%>      ! Parenthetical marker (right hand side)
+%<lpar%>      ! Parenthetical marker (left hand side)
+%<ltr%>       ! Letter
+
 ! Escaped characters
 
-%{ь%}    ! used for umlaut of ~previous vowel
 %>       ! morpheme boundary
+%.
+%,
+
+%{ь%}    ! used for umlaut of ~previous vowel
 %{ױ%}    ! for ױ to ײ umlaut correspondence
 %{ע%}    ! ע or empty; in -{ע}ן is empty except after נ and ל
 
@@ -70,6 +91,8 @@ Multichar_Symbols
 פּ
 יי
 וו
+וי
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
@@ -83,6 +106,7 @@ VerbRoot ;
 Conjunctions ;
 Prepositions ;
 Pronouns ;
+Punctuation ;
 
 
 !!! Format for noun lexica is N-[gender]-[class]
@@ -297,6 +321,39 @@ LEXICON V-HOBN-HA
 
 %<v%>%<pp%>%[%+pp%]:ט # ;
 
+LEXICON VAux-COMMON-DEL
+
+%<pres%>%<p2%>%<sg%>:%>סט # ;
+%<pres%>%<p3%>%<sg%>:%>ט # ;
+%<pres%>%<p2%>%<pl%>:%>ט # ;
+
+LEXICON VAux-COMMON-NODEL
+
+%<pres%>%<p1%>%<sg%>: # ;
+%<pres%>%<p1%>%<pl%>:%>ן # ;
+%<pres%>%<p3%>%<pl%>:%>ן # ;
+
+LEXICON VAux-HOBN-HOB
+
+%<vaux%>: V-COMMON-INF ;
+%<vaux%>: VAux-COMMON-NODEL ;
+
+LEXICON VAux-HOBN-HO
+
+%<vaux%>: VAux-COMMON-DEL ;
+
+LEXICON VAux-HOBN-HA
+
+%<vaux%>%<pp%>%[%+pp%]:ט # ;
+
+LEXICON VAux-VEL-VEL
+
+%<vaux%>: VAux-COMMON-NODEL ;
+
+LEXICON VAux-VEL-VE
+
+%<vaux%>: VAux-COMMON-DEL ;
+
 LEXICON CC
 
 %<cnjcoo%>: # ;
@@ -343,6 +400,64 @@ LEXICON PRON-P3-PL
 זײ%<prn%>%<pers%>%<p3%>%<pl%>%<acc%>:זײ # ;
 זײ%<prn%>%<pers%>%<p3%>%<pl%>%<dat%>:זײ # ;
 
+LEXICON DET-PERS-AGREEMENT
+
+%<attr%>%<m%>%<sg%>%<nom%>: # ;
+%<attr%>%<m%>%<sg%>%<acc%>: # ;
+%<attr%>%<m%>%<sg%>%<dat%>: # ;
+%<attr%>%<f%>%<sg%>%<nom%>: # ;
+%<attr%>%<f%>%<sg%>%<acc%>: # ;
+%<attr%>%<f%>%<sg%>%<dat%>: # ;
+%<attr%>%<nt%>%<sg%>%<nom%>: # ;
+%<attr%>%<nt%>%<sg%>%<acc%>: # ;
+%<attr%>%<nt%>%<sg%>%<dat%>: # ;
+%<attr%>%<mfn%>%<pl%>%<nom%>:%>ע # ;
+%<attr%>%<mfn%>%<pl%>%<acc%>:%>ע # ;
+%<attr%>%<mfn%>%<pl%>%<dat%>:%>ע # ;
+
+%<pred%>%<m%>%<sg%>%<nom%>:%>ער # ;
+%<pred%>%<m%>%<sg%>%<acc%>:%>%{ע%}ן # ;
+%<pred%>%<m%>%<sg%>%<dat%>:%>%{ע%}ן # ;
+%<pred%>%<f%>%<sg%>%<nom%>:%>ע # ;
+%<pred%>%<f%>%<sg%>%<acc%>:%>ע # ;
+%<pred%>%<f%>%<sg%>%<dat%>:%>ער # ;
+%<pred%>%<nt%>%<sg%>%<nom%>:%>ס # ;
+%<pred%>%<nt%>%<sg%>%<acc%>:%>ס # ;
+%<pred%>%<nt%>%<sg%>%<dat%>:%>%{ע%}ן # ;
+%<pred%>%<mfn%>%<pl%>%<nom%>:%>ע # ;
+%<pred%>%<mfn%>%<pl%>%<acc%>:%>ע # ;
+%<pred%>%<mfn%>%<pl%>%<dat%>:%>ע # ;
+
+
+LEXICON DET-PERS-P1SG
+
+%<det%>%<pos%>: DET-PERS-AGREEMENT ;
+
+LEXICON DET-PERS-P2SG
+
+%<det%>%<pos%>: DET-PERS-AGREEMENT ;
+
+LEXICON DET-PERS-P3SGMN
+
+%<det%>%<pos%>: DET-PERS-AGREEMENT ;
+
+LEXICON DET-PERS-P3SGF
+
+%<det%>%<pos%>: DET-PERS-AGREEMENT ;
+
+LEXICON DET-PERS-P1PL
+
+%<det%>%<pos%>: DET-PERS-AGREEMENT ;
+
+LEXICON DET-PERS-P2PL
+
+%<det%>%<pos%>: DET-PERS-AGREEMENT ;
+
+LEXICON DET-PERS-P3PL
+
+%<det%>%<pos%>: DET-PERS-AGREEMENT ;
+
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
@@ -351,18 +466,21 @@ LEXICON PRON-P3-PL
 LEXICON Conjunctions
 
 און:און CC ; ! "and"
+אָדער:אָדער CC ; ! "or"
 
 LEXICON Prepositions
 
 פֿון:פֿון PREP ; ! "of, from"
 אין:אין PREP ; ! "in"
 מיט:מיט PREP ; ! "with"
-אױף:אױף PREP ; ! "on, by"
 איבער:איבער PREP ; ! "over, above; about"
+פֿאַר:פֿאַר PREP ; ! "for"
+ביז:ביז PREP ; ! "up to, until"
 
-אױפֿן:אױף%<pr%>+דער%<det%>%<m%>%<acc%> # ; ! FIXME: is there a better way to do this?
-אױפֿן:אױף%<pr%>+דער%<det%>%<m%>%<dat%> # ;
-אױפֿן:אױף%<pr%>+דאָס%<det%>%<nt%>%<dat%> # ;
+אױף:אױף PREP ; ! "on, by"
+אױף%<pr%>%+דער%<det%>%<m%>%<acc%>:אױפֿן # ; ! FIXME: is there a better way to do this?
+אױף%<pr%>%+דער%<det%>%<m%>%<dat%>:אױפֿן # ;
+אױף%<pr%>%+דאָס%<det%>%<nt%>%<dat%>:אױפֿן # ;
 
 
 
@@ -374,6 +492,14 @@ LEXICON DetRoot
 די:ד DET-DEF-PL ; ! "the"
 אַ:אַ DET-INDEF ; ! "a"
 !אַן:אַן DET-INDEF ; ! "an"
+
+מײַן:מײַן DET-PERS-P1SG ;
+דײַן:דײַן DET-PERS-P2SG ;
+זײַן:זײַן DET-PERS-P3SGMN ;
+איר:איר DET-PERS-P3SGF ;
+אונדזער:אונדזער DET-PERS-P1PL ;
+אײַער:אײַער DET-PERS-P2PL ;
+זײער:זײער DET-PERS-P3PL ;
 
 LEXICON Pronouns
 
@@ -396,6 +522,7 @@ LEXICON NounRoot
 הימל:הימל N-M-N ; ! "heaven"
 לאַן:לאַן N-M-N ; ! "meadow"
 טאָג:טאָג N-M-UML ; ! "day"
+קינד:קינד N-N-UML-ER ; ! "child" (technically no umlaut)
 
 LEXICON VerbRoot
 %[%-pp%]:גע VerbStems ; ! past participle
@@ -413,12 +540,30 @@ LEXICON IrregularVerbs
 האָבן:האַ V-HOBN-HO ;
 האָבן:האַ V-HOBN-HA ;
 
+LEXICON Auxiliaries
+
+האָבן:האָב VAux-HOBN-HOB ;
+האָבן:האַ VAux-HOBN-HO ;
+האָבן:האַ VAux-HOBN-HA ;
+
+װעל:װעל VAux-VEL-VEL ;
+װעל:װע VAux-VEL-VE ;
+
 LEXICON VerbStems
 
 IrregularVerbs ; 
+Auxiliaries ; 
+
 קױפֿן:קױפֿ V-REG ;
 פֿאַרלירן:פֿאַרליר V-REG-NOPREF ;
 בּעטן:בּעט V-STRONG-7 ;
+
+
+LEXICON Punctuation
+
+%.%<sent%>:%. # ;
+,%<cm%>:%, # ;
+
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon

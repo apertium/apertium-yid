@@ -1,5 +1,5 @@
 Alphabet
- א אַ אָ בּ בֿ ג ד ה ו וּ ז ח חּ ט י יִ ך כ כּ ל ם מ ן נ ס ע ף פ פּ פֿ ץ צ ק ר ש שׂ ת תּ װ ױ ײ ײַ יי וו
+ א אַ אָ בּ בֿ ג ד ה ו וּ ז ח חּ ט י יִ ך כ כּ ל ם מ ן נ ס ע ף פ פּ פֿ ץ צ ק ר שׁ שׂ ש ת תּ װ ױ ײ ײַ יי וו
  ׳ ״
  ·ּ ־ 
  %{ь%}:0 %>:0 %{ױ%}:ױ %{ע%}:0 ;
@@ -35,12 +35,17 @@ Cx:Cy <=> _ .#. ;
 "Delete final ט of verb stems when ט follows"
 ט:0 <=> _ %>: :ט .#. ;
 
+"Final ן is ם after stems ending with ן"
+ן:ם <=> ן: %>: %{ע%}: _ .#. ;
+
+!@ מ ײַ ן:נ %>:0 %{ע%}:ע ן:ם ;
+
 
 !!!!!!!! VOWEL RULES !!!!!!!!
 
 "Epenthesise ע as needed"
-%{ע%}:ע <=> [ :נ | :ל ]/:0 _ :ן ;  ! after ל and נ in plural ן suffix
-            :ײַ/:0 _ :נ ;              ! after ײַ in pprs
+%{ע%}:ע <=> [ :נ | :ל ]/:0 _ ן: ;  ! after ל and נ in plural ן suffix
+            :ײַ/:0 _ :נ ;           ! after ײַ in pprs
 
 
 !!!!!!!! UMLAUT RULES !!!!!!!!
