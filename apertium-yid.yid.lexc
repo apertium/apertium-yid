@@ -9,7 +9,6 @@ Multichar_Symbols
 %<prn%>  ! pronoun
 %<cnjcoo%> ! coordinating conjunction
 %<pr%>   ! preposition
-%<prn%>  ! pronoun
 
 ! types of pronouns
 %<pers%> ! personal
@@ -24,9 +23,10 @@ Multichar_Symbols
 %<nt%>   ! neuter
 
 ! person
-%<p1%>
-%<p2%>
-%<p3%>
+%<p1%>   ! 1st person
+%<p2%>   ! 2nd person
+%<p3%>   ! 3rd person
+%<impers%> ! impersonal
 
 ! cases: for determiners, pronouns, etc.
 %<nom%>  ! nominative
@@ -80,6 +80,7 @@ DetRoot ;
 VerbRoot ;
 Conjunctions ;
 Prepositions ;
+Pronouns ;
 
 
 !!! Format for noun lexica is N-[gender]-[class]
@@ -212,7 +213,15 @@ LEXICON V-COMMON-PPRS
 
 LEXICON V-COMMON-IMP
 
+V-COMMON-IMP-SG ;
+V-COMMON-IMP-PL ;
+
+LEXICON V-COMMON-IMP-SG
+
 %<imp%>%<sg%>: # ;
+
+LEXICON V-COMMON-IMP-PL
+
 %<imp%>%<pl%>:%>ט # ;
 
 
@@ -256,10 +265,31 @@ LEXICON V-ZAYN-IZ
 
 %<v%>%<pres%>%<p3%>%<sg%>: # ;
 
-LEXICON V-ZAYN-VEN
+LEXICON V-ZAYN-VE
 
-%<v%>%<pp%>%[%+pp%]: # ;
+%<v%>%<pp%>%[%+pp%]:ן # ;
+%<v%>%<pp%>%[%+pp%]:זן # ;  ! Dir/LR
 
+LEXICON V-HOBN-HOB
+
+%<v%>: V-COMMON-INF ;
+%<v%>: V-COMMON-PPRS ;
+%<v%>: V-COMMON-IMP-SG ;
+
+%<v%>%<pres%>%<p1%>%<sg%>: # ;
+%<v%>%<pres%>%<p1%>%<pl%>:%>ן # ;
+%<v%>%<pres%>%<p3%>%<pl%>:%>ן # ;
+
+LEXICON V-HOBN-HO
+
+%<v%>%<pres%>%<p2%>%<sg%>:%>סט # ;
+%<v%>%<pres%>%<p3%>%<sg%>:%>ט # ;
+%<v%>%<pres%>%<p2%>%<pl%>:%>ט # ;
+%<v%>: V-COMMON-IMP-PL ;
+
+LEXICON V-HOBN-HA
+
+%<v%>%<pp%>%[%+pp%]:ט # ;
 
 LEXICON CC
 
@@ -270,42 +300,42 @@ LEXICON PREP
 %<pr%>: # ;
 
 LEXICON PRON-P1-SG
-איך:איך%<prn%>%<pers%>%<p1%>%<sg%>%<nom%> # ;
-איך:מיך%<prn%>%<pers%>%<p1%>%<sg%>%<acc%> # ;
-איך:מיר%<prn%>%<pers%>%<p1%>%<sg%>%<dat%> # ;
+איך%<prn%>%<pers%>%<p1%>%<sg%>%<nom%>:איך # ;
+איך%<prn%>%<pers%>%<p1%>%<sg%>%<acc%>:מיך # ;
+איך%<prn%>%<pers%>%<p1%>%<sg%>%<dat%>:מיר # ;
 
 LEXICON PRON-P2-SG
-דו:דו%<prn%>%<pers%>%<p2%>%<sg%>%<nom%> # ;
-דו:דיך%<prn%>%<pers%>%<p2%>%<sg%>%<acc%> # ;
-דו:דיר%<prn%>%<pers%>%<p2%>%<sg%>%<dat%> # ;
+דו%<prn%>%<pers%>%<p2%>%<sg%>%<nom%>:דו # ;
+דו%<prn%>%<pers%>%<p2%>%<sg%>%<acc%>:דיך # ;
+דו%<prn%>%<pers%>%<p2%>%<sg%>%<dat%>:דיר # ;
 
 LEXICON PRON-P3-SG
-ער:ער%<prn%>%<pers%>%<p3%>%<sg%>%<m%>%<nom%> # ;
-ער:אים%<prn%>%<pers%>%<p3%>%<sg%>%<m%>%<acc%> # ;
-ער:אים%<prn%>%<pers%>%<p3%>%<sg%>%<m%>%<dat%> # ;
+ער%<prn%>%<pers%>%<p3%>%<sg%>%<m%>%<nom%>:ער # ;
+ער%<prn%>%<pers%>%<p3%>%<sg%>%<m%>%<acc%>:אים # ;
+ער%<prn%>%<pers%>%<p3%>%<sg%>%<m%>%<dat%>:אים # ;
 
-זי:זי%<prn%>%<pers%>%<p3%>%<sg%>%<f%>%<nom%> # ;
-זי:זי%<prn%>%<pers%>%<p3%>%<sg%>%<f%>%<acc%> # ;
-זי:איר%<prn%>%<pers%>%<p3%>%<sg%>%<f%>%<dat%> # ;
+זי%<prn%>%<pers%>%<p3%>%<sg%>%<f%>%<nom%>:זי # ;
+זי%<prn%>%<pers%>%<p3%>%<sg%>%<f%>%<acc%>:זי # ;
+זי%<prn%>%<pers%>%<p3%>%<sg%>%<f%>%<dat%>:איר # ;
 
-עס:עס%<prn%>%<pers%>%<p3%>%<sg%>%<nt%>%<nom%> # ;
-עס:עס%<prn%>%<pers%>%<p3%>%<sg%>%<nt%>%<acc%> # ;
-עס:אים%<prn%>%<pers%>%<p3%>%<sg%>%<nt%>%<dat%> # ;
+עס%<prn%>%<pers%>%<p3%>%<sg%>%<nt%>%<nom%>:עס # ;
+עס%<prn%>%<pers%>%<p3%>%<sg%>%<nt%>%<acc%>:עס # ;
+עס%<prn%>%<pers%>%<p3%>%<sg%>%<nt%>%<dat%>:אים # ;
 
 LEXICON PRON-P1-PL
-מיר:מיר%<prn%>%<pers%>%<p1%>%<pl%>%<nom%> # ;
-מיר:אונדז%<prn%>%<pers%>%<p1%>%<pl%>%<acc%> # ;
-מיר:אונדז%<prn%>%<pers%>%<p1%>%<pl%>%<dat%> # ;
+מיר%<prn%>%<pers%>%<p1%>%<pl%>%<nom%>:מיר # ;
+מיר%<prn%>%<pers%>%<p1%>%<pl%>%<acc%>:אונדז # ;
+מיר%<prn%>%<pers%>%<p1%>%<pl%>%<dat%>:אונדז # ;
 
 LEXICON PRON-P2-PL
-איר:איר%<prn%>%<pers%>%<p2%>%<pl%>%<nom%> # ;
-איר:אײַך%<prn%>%<pers%>%<p2%>%<pl%>%<acc%> # ;
-איר:אײַך%<prn%>%<pers%>%<p2%>%<pl%>%<dat%> # ;
+איר%<prn%>%<pers%>%<p2%>%<pl%>%<nom%>:איר # ;
+איר%<prn%>%<pers%>%<p2%>%<pl%>%<acc%>:אײַך # ;
+איר%<prn%>%<pers%>%<p2%>%<pl%>%<dat%>:אײַך # ;
 
 LEXICON PRON-P3-PL
-זײ:זײ%<prn%>%<pers%>%<p3%>%<pl%>%<nom%> # ;
-זײ:זײ%<prn%>%<pers%>%<p3%>%<pl%>%<acc%> # ;
-זײ:זײ%<prn%>%<pers%>%<p3%>%<pl%>%<dat%> # ;
+זײ%<prn%>%<pers%>%<p3%>%<pl%>%<nom%>:זײ # ;
+זײ%<prn%>%<pers%>%<p3%>%<pl%>%<acc%>:זײ # ;
+זײ%<prn%>%<pers%>%<p3%>%<pl%>%<dat%>:זײ # ;
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -319,6 +349,7 @@ LEXICON Conjunctions
 LEXICON Prepositions
 
 פֿון:פֿון PREP ; ! "of, from"
+אין:אין PREP ; ! "in"
 
 
 LEXICON DetRoot
@@ -338,6 +369,8 @@ PRON-P3-SG ;
 PRON-P1-PL ;
 PRON-P2-PL ;
 PRON-P3-PL ;
+מען%<prn%>%<pers%>%<impers%>%<nom%>:מען # ;
+מען%<prn%>%<pers%>%<impers%>%<nom%>:מע # ;  ! Dir/LR
 
 LEXICON NounRoot
 
@@ -358,7 +391,11 @@ LEXICON IrregularVerbs
 זײַן:זײַ V-ZAYN-ZAY ;
 זײַן:בי V-ZAYN-BI ;
 זײַן:איז V-ZAYN-IZ ;
-זײַן:װען V-ZAYN-VEN ;
+זײַן:װע V-ZAYN-VE ;
+
+האָבן:האָב V-HOBN-HOB ;
+האָבן:האַ V-HOBN-HO ;
+האָבן:האַ V-HOBN-HA ;
 
 LEXICON VerbStems
 
