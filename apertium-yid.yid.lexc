@@ -353,6 +353,13 @@ LEXICON Prepositions
 פֿון:פֿון PREP ; ! "of, from"
 אין:אין PREP ; ! "in"
 מיט:מיט PREP ; ! "with"
+אױף:אױף PREP ; ! "on, by"
+איבער:איבער PREP ; ! "over, above; about"
+
+אױפֿן:אױף%<pr%>+דער%<det%>%<m%>%<acc%> # ; ! FIXME: is there a better way to do this?
+אױפֿן:אױף%<pr%>+דער%<det%>%<m%>%<dat%> # ;
+אױפֿן:אױף%<pr%>+דאָס%<det%>%<nt%>%<dat%> # ;
+
 
 
 LEXICON DetRoot
@@ -384,6 +391,7 @@ LEXICON NounRoot
 יאָר:יאָר N-M-N ; ! "year"
 הימל:הימל N-M-N ; ! "heaven"
 לאַן:לאַן N-M-N ; ! "meadow"
+טאָג:טאָג N-M-UML ; ! "day"
 
 LEXICON VerbRoot
 %[%-pp%]:גע VerbStems ; ! past participle
