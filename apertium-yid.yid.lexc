@@ -360,12 +360,10 @@ LEXICON CC
 
 LEXICON PREP-EN
 
-%<pr%>: # ;
+PREP ;
 %<pr%>%+דער%<det%>%<m%>%<acc%>:%>%{ע%}ן # ;
 %<pr%>%+דער%<det%>%<m%>%<dat%>:%>%{ע%}ן # ;
 %<pr%>%+דאָס%<det%>%<nt%>%<dat%>:%>%{ע%}ן # ;
-
-
 
 LEXICON PREP
 
@@ -487,6 +485,8 @@ LEXICON Prepositions
 ביז:ביז PREP ; ! "up to, until"
 אונטער:אונטער PREP ; ! "under"
 אױף:אױף PREP-EN ; ! "on, by"
+בײַ:בײַ PREP ; ! "у"
+דורך:דורך PREP ; ! "through"
 
 
 
