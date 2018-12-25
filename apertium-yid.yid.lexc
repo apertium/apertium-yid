@@ -358,6 +358,15 @@ LEXICON CC
 
 %<cnjcoo%>: # ;
 
+LEXICON PREP-EN
+
+%<pr%>: # ;
+%<pr%>%+דער%<det%>%<m%>%<acc%>:%>%{ע%}ן # ;
+%<pr%>%+דער%<det%>%<m%>%<dat%>:%>%{ע%}ן # ;
+%<pr%>%+דאָס%<det%>%<nt%>%<dat%>:%>%{ע%}ן # ;
+
+
+
 LEXICON PREP
 
 %<pr%>: # ;
@@ -470,17 +479,14 @@ LEXICON Conjunctions
 
 LEXICON Prepositions
 
-פֿון:פֿון PREP ; ! "of, from"
-אין:אין PREP ; ! "in"
+פֿון:פֿון PREP-EN ; ! "of, from"
+אין:אין PREP-EN ; ! "in"
 מיט:מיט PREP ; ! "with"
 איבער:איבער PREP ; ! "over, above; about"
 פֿאַר:פֿאַר PREP ; ! "for"
 ביז:ביז PREP ; ! "up to, until"
-
-אױף:אױף PREP ; ! "on, by"
-אױף%<pr%>%+דער%<det%>%<m%>%<acc%>:אױפֿן # ; ! FIXME: is there a better way to do this?
-אױף%<pr%>%+דער%<det%>%<m%>%<dat%>:אױפֿן # ;
-אױף%<pr%>%+דאָס%<det%>%<nt%>%<dat%>:אױפֿן # ;
+אונטער:אונטער PREP ; ! "under"
+אױף:אױף PREP-EN ; ! "on, by"
 
 
 
