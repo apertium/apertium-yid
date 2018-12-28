@@ -607,6 +607,7 @@ LEXICON Adverbs
 אַרײַן:אַרײַן ADV ; ! "in, inside"
 אױך:אױך ADV ; ! "also"
 אױס:אױס ADV ; ! "over (finished)"
+דאָרט:דאָרט ADV ; ! "there"
 הײַנט:הײַנט ADV ; ! "today"
 מער:מער ADV ; ! "more"
 נאָך:נאָך ADV ; ! "still"
@@ -694,6 +695,8 @@ LEXICON NounRoot
 יאָר:יאָר N-M-N ; ! "year"
 לאַן:לאַן N-M-N ; ! "meadow"
 לאַנד:לאַנד N-N-UML-ER ; ! "country, land"
+מענטש:מענטש N-M-N ; ! "human; mentsh, gentleman"
+סטאַנציע:סטאַנציע N-F-S ; ! "station"
 צײַט:צײַט N-F-N ; ! "time"
 קינד:קינד N-N-UML-ER ; ! "child" (technically no umlaut)
 װעלט:װעלט N-F-N ; ! "world"
