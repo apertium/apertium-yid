@@ -6,17 +6,21 @@ Multichar_Symbols
 %<n%>    ! Noun
 %<v%>    ! Verb
 %<vaux%> ! Auxiliary
-%<det%>  ! determiner
-%<prn%>  ! pronoun
-%<cnjcoo%> ! coordinating conjunction
-%<pr%>   ! preposition
-%<det%>  ! determiner
+%<det%>  ! Determiner
+%<prn%>  ! Pronoun
+%<pr%>   ! Preposition
+%<det%>  ! Determiner
+%<adv%>  ! Adverb
+%<preadv%> ! Preadverb
+%<cnjcoo%> ! Coordinating conjunction
+%<cnjsub%> ! Subordinating conjunction
 
 ! types of pronouns and determiners
 %<pers%> ! personal
 %<pos%>  ! personal possessive
 %<att%>  ! attributive ("prepositive")
 %<pred%> ! predicative ("postpositive", nominalised)
+%<itg%>  ! interrogative
 
 ! number: for nouns, verbs, adjectives, determiners, etc.
 %<pl%>   ! Plural
@@ -107,6 +111,7 @@ Conjunctions ;
 Prepositions ;
 Pronouns ;
 Punctuation ;
+Adverbs ;
 
 
 !!! Format for noun lexica is N-[gender]-[class]
@@ -464,7 +469,21 @@ LEXICON DET-PERS-P3PL
 
 %<det%>%<pos%>: DET-PERS-AGREEMENT ;
 
+LEXICON ADV-ITG
 
+%<adv%>%<itg%>: # ;
+
+LEXICON ADV
+
+%<adv%>: # ;
+
+LEXICON CNJSUB
+
+%<cnjsub%>: # ;
+
+LEXICON PREADV
+
+%<preadv%>: # ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
@@ -474,6 +493,18 @@ LEXICON Conjunctions
 
 און:און CC ; ! "and"
 אָדער:אָדער CC ; ! "or"
+
+LEXICON Adverbs
+
+װי:װי ADV-ITG ; ! "how"
+װי:װי PREADV ; ! "how"
+װי:װי CNJSUB ; ! "how"
+נישט:נישט ADV ; ! "not"
+נישט:ניט ADV ; ! "not" ! Dir/LR
+אױך:אױך ADV ; ! "also"
+מער:מער ADV ; ! "more"
+נאָך:נאָך PREADV ; ! "still"
+
 
 LEXICON Prepositions
 
@@ -487,6 +518,7 @@ LEXICON Prepositions
 אױף:אױף PREP-EN ; ! "on, by"
 בײַ:בײַ PREP ; ! "у"
 דורך:דורך PREP ; ! "through"
+צו:צו PREP-EN ; ! "to"
 
 
 
@@ -517,6 +549,9 @@ PRON-P2-PL ;
 PRON-P3-PL ;
 מען%<prn%>%<pers%>%<impers%>%<nom%>:מען # ;
 מען%<prn%>%<pers%>%<impers%>%<nom%>:מע # ;  ! Dir/LR
+װאָס%<prn%>%<itg%>%<nom%>:װאָס # ;
+װאָס%<prn%>%<itg%>%<acc%>:װאָס # ;
+װאָס%<prn%>%<itg%>%<dat%>:װאָס # ;
 
 LEXICON NounRoot
 

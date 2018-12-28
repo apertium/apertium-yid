@@ -35,10 +35,12 @@ Cx:Cy <=> _ .#. ;
 "Delete final ט of verb stems when ט follows"
 ט:0 <=> _ %>: :ט .#. ;
 
-"Final ן is ם after stems ending with ן"
+"Final ן is ם after stems ending with ן or vowels"
 ן:ם <=> ן: %>: %{ע%}: _ .#. ;
+        [ :ײַ | :ו ] %>: %{ע%}: _ .#. ;
 
 !@ מ ײַ ן:נ %>:0 %{ע%}:ע ן:ם ;
+!! בײַם, צום
 
 
 !!!!!!!! VOWEL RULES !!!!!!!!
