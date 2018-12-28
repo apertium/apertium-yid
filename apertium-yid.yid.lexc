@@ -437,25 +437,29 @@ LEXICON ADJ-COMMON
 
 %<pred%>: # ;
 
-%<attr%>%<m%>%<sg%>%<nom%>:%>ער # ;
-%<attr%>%<m%>%<sg%>%<acc%>:%>%{ע%}ן # ;
-%<attr%>%<m%>%<sg%>%<dat%>:%>%{ע%}ן # ;
-%<attr%>%<f%>%<sg%>%<nom%>:%>ע # ;
-%<attr%>%<f%>%<sg%>%<acc%>:%>ע # ;
-%<attr%>%<f%>%<sg%>%<dat%>:%>ער # ;
-%<attr%>%<def%>%<nt%>%<sg%>%<nom%>:%>ע # ;
-%<attr%>%<def%>%<nt%>%<sg%>%<acc%>:%>ע # ;
-%<attr%>%<def%>%<nt%>%<sg%>%<dat%>:%>%{ע%}ן # ;
-%<attr%>%<ind%>%<nt%>%<sg%>%<nom%>: # ;
-%<attr%>%<ind%>%<nt%>%<sg%>%<acc%>: # ;
-%<attr%>%<ind%>%<nt%>%<sg%>%<dat%>: # ;
+%<attr%>: ADJ-INFL-ENDINGS ;
+
+LEXICON ADJ-INFL-ENDINGS
+
+%<m%>%<sg%>%<nom%>:%>ער # ;
+%<m%>%<sg%>%<acc%>:%>%{ע%}ן # ;
+%<m%>%<sg%>%<dat%>:%>%{ע%}ן # ;
+%<f%>%<sg%>%<nom%>:%>ע # ;
+%<f%>%<sg%>%<acc%>:%>ע # ;
+%<f%>%<sg%>%<dat%>:%>ער # ;
+%<def%>%<nt%>%<sg%>%<nom%>:%>ע # ;
+%<def%>%<nt%>%<sg%>%<acc%>:%>ע # ;
+%<def%>%<nt%>%<sg%>%<dat%>:%>%{ע%}ן # ;
+%<ind%>%<nt%>%<sg%>%<nom%>: # ;
+%<ind%>%<nt%>%<sg%>%<acc%>: # ;
+%<ind%>%<nt%>%<sg%>%<dat%>: # ;
 ! FIXME: figure out how to deal with "postpositive/nominalised" neuter forms,
 !      e.g. at https://en.wiktionary.org/wiki/%D7%92%D7%A8%D7%95%D7%99%D7%A1
 !      or https://en.wiktionary.org/wiki/%D7%A9%D7%98%D7%90%D6%B7%D7%A8%D7%A7
 !      and how they're different from predicative forms
-%<attr%>%<mfn%>%<pl%>%<nom%>:%>ע # ;
-%<attr%>%<mfn%>%<pl%>%<acc%>:%>ע # ;
-%<attr%>%<mfn%>%<pl%>%<dat%>:%>ע # ;
+%<mfn%>%<pl%>%<nom%>:%>ע # ;
+%<mfn%>%<pl%>%<acc%>:%>ע # ;
+%<mfn%>%<pl%>%<dat%>:%>ע # ;
 
 LEXICON ADJ-UML
 
@@ -536,6 +540,14 @@ LEXICON DET-PERS-P3PL
 
 %<det%>%<pos%>: DET-PERS-AGREEMENT ;
 
+LEXICON DET-ITG
+
+%<det%>%<itg%>: ADJ-INFL-ENDINGS ;
+
+LEXICON PRON-ITG
+
+%<prn%>%<itg%>: # ;
+
 LEXICON ADV-ITG
 
 %<adv%>%<itg%>: # ;
@@ -585,6 +597,7 @@ LEXICON Conjunctions
 LEXICON Adverbs
 
 װי:װי ADV-ITG ; ! "how"
+װען:װען ADV-ITG ; ! "when"
 װי:װי PREADV ; ! "how"
 נישט:נישט ADV ; ! "not"
 נישט:ניט ADV ; ! "not" ! Dir/LR
@@ -641,6 +654,8 @@ LEXICON DetRoot
 אײַער:אײַער DET-PERS-P2PL ;
 זײער:זײער DET-PERS-P3PL ;
 
+װעלך:װעלך DET-ITG ; ! "which"
+
 LEXICON Pronouns
 
 PRON-P1-SG ;
@@ -655,6 +670,8 @@ PRON-P3-PL ;
 װאָס%<prn%>%<itg%>%<acc%>:װאָס # ;
 װאָס%<prn%>%<itg%>%<dat%>:װאָס # ;
 זיך%<prn%>%<ref%>:זיך # ;
+
+װעלך:װעלך PRON-ITG ; ! "which one (?)"  FIXME: CHECK
 
 LEXICON NounRoot
 
