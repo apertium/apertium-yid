@@ -587,52 +587,52 @@ LEXICON Conjunctions
 אָדער:אָדער CC ; ! "or"
 אָבער:אָבער CC ; ! "but"
 
-װי:װי CNJSUB ; ! "how"
-װײַל:װײַל CNJSUB ; ! "because"
-װען:װען CNJSUB ; ! "when"
-אױב:אױב CNJSUB ; ! "if"
 אַז:אַז CNJSUB ; ! "that"
+אױב:אױב CNJSUB ; ! "if"
+װי:װי CNJSUB ; ! "how"
+װען:װען CNJSUB ; ! "when"
+װײַל:װײַל CNJSUB ; ! "because"
 
 
 LEXICON Adverbs
 
-װי:װי ADV-ITG ; ! "how"
-װען:װען ADV-ITG ; ! "when"
-װי:װי PREADV ; ! "how"
-נישט:נישט ADV ; ! "not"
-נישט:ניט ADV ; ! "not" ! Dir/LR
-אױך:אױך ADV ; ! "also"
-מער:מער ADV ; ! "more"
-נאָך:נאָך PREADV ; ! "still"  ! FIXME: CHECK
-נאָך:נאָך ADV ; ! "still"
-הײַנט:הײַנט ADV ; ! "today"
-שױן:שױן ADV ; ! "already, yet"
-נאָר:נאָר PREADV ; ! "only"
-צוריק:צוריק ADV ; ! "back"
-אַרײַן:אַרײַן ADV ; ! "in, inside"
-אױס:אױס ADV ; ! "over (finished)"
-פֿאַראַן:פֿאַראַן ADV ; ! "there"
 אַרױס:אַרױס ADV ; ! "out"
+אַרײַן:אַרײַן ADV ; ! "in, inside"
+אױך:אױך ADV ; ! "also"
+אױס:אױס ADV ; ! "over (finished)"
+הײַנט:הײַנט ADV ; ! "today"
+מער:מער ADV ; ! "more"
+נאָך:נאָך ADV ; ! "still"
+נאָך:נאָך PREADV ; ! "still"  ! FIXME: CHECK
+נאָר:נאָר PREADV ; ! "only"
+נישט:ניט ADV ; ! "not" ! Dir/LR
+נישט:נישט ADV ; ! "not"
+פֿאַראַן:פֿאַראַן ADV ; ! "there"
+צוריק:צוריק ADV ; ! "back"
+שױן:שױן ADV ; ! "already, yet"
+װי:װי ADV-ITG ; ! "how"
+װי:װי PREADV ; ! "how"
+װען:װען ADV-ITG ; ! "when"
 
 LEXICON Prepositions
 
-פֿון:פֿון PREP-EN ; ! "of, from"
-אין:אין PREP-EN ; ! "in"
-מיט:מיט PREP ; ! "with"
-איבער:איבער PREP ; ! "over, above; about"
-פֿאַר:פֿאַר PREP-EN ; ! "for"
-ביז:ביז PREP ; ! "up to, until"
+אַרום:אַרום PREP ; ! "around"
 אונטער:אונטער PREP ; ! "under"
+איבער:איבער PREP ; ! "over, above; about"
+אין:אין PREP-EN ; ! "in"
 אױף:אױף PREP-EN ; ! "on, by"
+ביז:ביז PREP ; ! "up to, until"
 בײַ:בײַ PREP-EN ; ! "у"
 דורך:דורך PREP ; ! "through"
-צו:צו PREP-EN ; ! "to"
+מיט:מיט PREP ; ! "with"
 נאָך:נאָך PREP-EN ; ! "after"
-אַרום:אַרום PREP ; ! "around"
-קעגן:קעגן PREP ; ! "against"
-װי:װי PREP ; ! "like"
+פֿאַר:פֿאַר PREP-EN ; ! "for"
+פֿון:פֿון PREP-EN ; ! "of, from"
+צו:צו PREP-EN ; ! "to"
 צװישן:צװישן PREP ; ! "between"
+קעגן:קעגן PREP ; ! "against"
 קײן:קײן PREP ; ! "to (+place)"
+װי:װי PREP ; ! "like"
 װעגן:װעגן PREP ; ! "about"
 
 
@@ -675,21 +675,21 @@ PRON-P3-PL ;
 
 LEXICON NounRoot
 
-הױז:הױז N-N-UML-ER ; ! "house" plural with ײַ
-בּױם:בּ%{ױ%}ם N-M-UML-ER ; ! "tree" plural with ײ
 אַרבעט:אַרבעט N-F-S ; ! "work"
 בּאַרג:בּאַרג N-M-UML ; ! "mountain"
-יאָר:יאָר N-M-N ; ! "year"
+בּױם:בּ%{ױ%}ם N-M-UML-ER ; ! "tree" plural with ײ
+בוך:בוך N-N-UML-ER ; ! "book"
 הימל:הימל N-M-N ; ! "heaven"
-לאַן:לאַן N-M-N ; ! "meadow"
-טאָג:טאָג N-M-UML ; ! "day"
-קינד:קינד N-N-UML-ER ; ! "child" (technically no umlaut)
-צײַט:צײַט N-F-N ; ! "time"
-װעלט:װעלט N-F-N ; ! "world"
-לאַנד:לאַנד N-N-UML-ER ; ! "country, land"
+הױז:הױז N-N-UML-ER ; ! "house" plural with ײַ
 זון:זון N-F-N ; ! "sun"
 זון:זון N-M-UML ; ! "son"
-בוך:בוך N-N-UML-ER ; ! "book"
+טאָג:טאָג N-M-UML ; ! "day"
+יאָר:יאָר N-M-N ; ! "year"
+לאַן:לאַן N-M-N ; ! "meadow"
+לאַנד:לאַנד N-N-UML-ER ; ! "country, land"
+צײַט:צײַט N-F-N ; ! "time"
+קינד:קינד N-N-UML-ER ; ! "child" (technically no umlaut)
+װעלט:װעלט N-F-N ; ! "world"
 
 LEXICON VerbRoot
 %[%-pp%]:גע VerbStems ; ! past participle
@@ -721,34 +721,34 @@ LEXICON VerbStems
 IrregularVerbs ; 
 Auxiliaries ; 
 
-קױפֿן:קױפֿ V-REG ; ! "buy"
-פֿאַרלירן:פֿאַרליר V-REG-NOPREF ; ! "lose"
 בּעטן:בּעט V-STRONG-7 ; ! "ask"
-קומען:קום V-STRONG-7 ; ! "come"
-מאַכן:מאַך V-REG ; ! "make"
 זאָגן:זאָג V-REG ; ! "say"
+מאַכן:מאַך V-REG ; ! "make"
+פֿאַרלירן:פֿאַרליר V-REG-NOPREF ; ! "lose"
+קומען:קום V-STRONG-7 ; ! "come"
+קױפֿן:קױפֿ V-REG ; ! "buy"
 
 LEXICON Adjectives
 
-גרױס:גרױס ADJ-UML ; ! "big"
 אַלט:אַלט ADJ-UML ; ! "old"
-יונג:יונג ADJ-UML ; ! "young"
 אַנדער:אַנדער ADJ-NO-COMP ; ! "different"
-שײן:שײן ADJ-UML ; ! "beautiful"
-שטאַרק:שטאַרק ADJ ; ! "strong"
-שלעכט:שלעכט ADJ-NO-COMP ; ! "bad"
-שלעכט:ערג ADJ-IRREG-COMP ; ! "worse/worst"
-גוט:גוט ADJ-NO-COMP ; ! "good"
 גוט:בעס ADJ-IRREG-COMP ; ! "better/best"
+גוט:גוט ADJ-NO-COMP ; ! "good"
+גרױס:גרױס ADJ-UML ; ! "big"
+יונג:יונג ADJ-UML ; ! "young"
+שטאַרק:שטאַרק ADJ ; ! "strong"
+שלעכט:ערג ADJ-IRREG-COMP ; ! "worse/worst"
+שלעכט:שלעכט ADJ-NO-COMP ; ! "bad"
+שײן:שײן ADJ-UML ; ! "beautiful"
 
 LEXICON ProperNouns
 
-ישראל:ישראל NP-TOP ; ! "Israel"
 אַמעריקע:אַמעריקע NP-TOP ; ! "America"
 דײַטשלאַנד:דײַטשלאַנד NP-TOP ; ! "Germany"
+ישראל:ישראל NP-TOP ; ! "Israel"
 
-ישראל:ישראל NP-ANT-M ; ! "Yisroel"
 דוד:דוד NP-ANT-M ; ! "Dovid"
+ישראל:ישראל NP-ANT-M ; ! "Yisroel"
 
 LEXICON Punctuation
 
