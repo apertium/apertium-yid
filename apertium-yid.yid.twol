@@ -2,7 +2,9 @@ Alphabet
  א אַ אָ בּ בֿ ג ד ה ו וּ ז ח חּ ט י יִ ך כ כּ ל ם מ ן נ ס ע ף פ פּ פֿ ץ צ ק ר שׁ שׂ ש ת תּ װ ױ ײ ײַ יי וו
  ׳ ״
  ·ּ ־ 
- %{ь%}:0 %>:0 %{ױ%}:ױ %{ע%}:0 ;
+ %{ь%}:0 %{ь2%}:0 %>:0 %{ױ%}:ױ %{ע%}:0 %{ס%}:ס
+ 
+ ;
 
 Sets
 
@@ -42,24 +44,41 @@ Cx:Cy <=> _ .#. ;
 !@ מ ײַ ן:נ %>:0 %{ע%}:ע ן:ם ;
 !! בײַם, צום
 
+"Delete ס after another ס"
+%{ס%}:0 <=> :ס/:0* _ ;
 
 !!!!!!!! VOWEL RULES !!!!!!!!
 
 "Epenthesise ע as needed"
-%{ע%}:ע <=> [ :נ | :ל ]/:0 _ ן: ;  ! after ל and נ in plural ן suffix
-            :ײַ/:0 _ :נ ;           ! after ײַ in pprs
+%{ע%}:ע <=> [ :מ | :נ | :ל ]/:0 _ ן: ;  ! after ל, מ, נ in ן suffixes
+            [ :מ | :ײַ ]/:0 _ :נ ;       ! after ײַ and מ in pprs
 
 
 !!!!!!!! UMLAUT RULES !!!!!!!!
 
 
 "Umlaut first vowel of words if {ь} occurs later in word"
-Vx:Vy <=> .#. :Cons* _ [ :Cons | :Vowel | [ :0 - %{ь%}: ] ]* %{ь%}:0 ;
+Vx:Vy <=> .#. :Cons* _ [ :Cons | :Vowel | [ :0 - [ %{ь%}: | %{ь2%}: ] ] ]* %{ь%}:0 ;
       where
            Vx in ( ױ א אַ אָ ו וּ %{ױ%} )
            Vy in ( ײַ ע ע ע י י ײ )
       matched ;
 
+"Umlaut first vowel of words if {ь2} occurs later in word"
+Vx:Vy <=> .#. :Cons* _ [ :Cons | :Vowel | [ :0 - [ %{ь2%}: | %{ь%}: ] ] ]* %{ь2%}:0 ;
+      except
+          .#. :י _ [ :Cons | :Vowel | [ :0 - [ %{ь2%}: | %{ь%}: ] ] ]* %{ь2%}:0 ;
+      where
+           Vx in ( ױ אַ ו )
+           Vy in ( ע ע י )
+      matched ;
+
+"Umlaut first vowel of words if {ь2} occurs later in word after י"
+Vx:Vy <=> .#. :י _ [ :Cons | :Vowel | [ :0 - [ %{ь2%}: | %{ь%}: ] ] ]* %{ь2%}:0 ;
+      where
+           Vx in ( ױ אַ ו )
+           Vy in ( ע ע יִ )
+      matched ;
 
 
 ! Resources:

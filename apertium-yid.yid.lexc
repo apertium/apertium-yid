@@ -11,20 +11,27 @@ Multichar_Symbols
 %<pr%>   ! Preposition
 %<det%>  ! Determiner
 %<adv%>  ! Adverb
+%<adj%>  ! Adjective
 %<preadv%> ! Preadverb
 %<cnjcoo%> ! Coordinating conjunction
 %<cnjsub%> ! Subordinating conjunction
 
-! types of pronouns and determiners
+! types of pronouns, determiners, and adjectives
 %<pers%> ! personal
 %<pos%>  ! personal possessive
-%<att%>  ! attributive ("prepositive")
+%<attr%> ! attributive ("prepositive")
 %<pred%> ! predicative ("postpositive", nominalised)
 %<itg%>  ! interrogative
+%<comp%> ! Comparative
+%<sup%>  ! Superlative
 
 ! number: for nouns, verbs, adjectives, determiners, etc.
 %<pl%>   ! Plural
 %<sg%>   ! Singular
+
+! definiteness
+%<def%>  ! Definite
+%<ind%>  ! Indefinite
 
 ! gender: for nouns, determiners, adjectives, etc.
 %<m%>    ! masculine
@@ -68,9 +75,11 @@ Multichar_Symbols
 %.
 %,
 
-%{ь%}    ! used for umlaut of ~previous vowel
+%{ь%}    ! used for umlaut of ~previous vowel for verbs
+%{ь2%}   ! used for umlaut of ~previous vowel for adjectives
 %{ױ%}    ! for ױ to ײ umlaut correspondence
 %{ע%}    ! ע or empty; in -{ע}ן is empty except after נ and ל
+%{ס%}    ! ס in סט superlative, deletes after other ס
 
 ! matched features
 %[%+pp%] ! past participle
@@ -112,6 +121,7 @@ Prepositions ;
 Pronouns ;
 Punctuation ;
 Adverbs ;
+Adjectives ;
 
 
 !!! Format for noun lexica is N-[gender]-[class]
@@ -166,10 +176,12 @@ LEXICON N-M-N
 LEXICON N-F-N
 
 %<n%>%<f%>%<sg%>: # ;
+%<n%>%<f%>%<pl%>:%{ע%}ן # ;
 
 LEXICON N-N-N
 
 %<n%>%<nt%>%<sg%>: # ;
+%<n%>%<nt%>%<pl%>:%{ע%}ן # ;
 
 LEXICON N-M-NULL
 
@@ -226,9 +238,9 @@ LEXICON V-COMMON
 %<v%>%<pres%>%<p1%>%<sg%>: # ;
 %<v%>%<pres%>%<p2%>%<sg%>:%>סט # ;
 %<v%>%<pres%>%<p3%>%<sg%>:%>ט # ;
-%<v%>%<pres%>%<p1%>%<pl%>:%>ן # ;
+%<v%>%<pres%>%<p1%>%<pl%>:%>%{ע%}ן # ;
 %<v%>%<pres%>%<p2%>%<pl%>:%>ט # ;
-%<v%>%<pres%>%<p3%>%<pl%>:%>ן # ;
+%<v%>%<pres%>%<p3%>%<pl%>:%>%{ע%}ן # ;
 
 %<v%>: V-COMMON-INF ;
 %<v%>: V-COMMON-IMP ;
@@ -274,7 +286,7 @@ LEXICON V-STRONG-7
 ! class 7 strong verbs
 
 V-COMMON ;
-%<v%>%<pp%>%[%+pp%]:%>ן # ;
+%<v%>%<pp%>%[%+pp%]:%>%{ע%}ן # ;
 
 LEXICON V-ZAYN-ZE
 
@@ -412,6 +424,37 @@ LEXICON PRON-P3-PL
 זײ%<prn%>%<pers%>%<p3%>%<pl%>%<acc%>:זײ # ;
 זײ%<prn%>%<pers%>%<p3%>%<pl%>%<dat%>:זײ # ;
 
+LEXICON ADJ-COMMON
+
+%<pred%>: # ;
+
+%<attr%>%<m%>%<sg%>%<nom%>:ער # ;
+%<attr%>%<m%>%<sg%>%<acc%>:%{ע%}ן # ;
+%<attr%>%<m%>%<sg%>%<dat%>:%{ע%}ן # ;
+%<attr%>%<f%>%<sg%>%<nom%>:ע # ;
+%<attr%>%<f%>%<sg%>%<acc%>:ע # ;
+%<attr%>%<f%>%<sg%>%<dat%>:ער # ;
+%<attr%>%<def%>%<nt%>%<sg%>%<nom%>:ע # ;
+%<attr%>%<def%>%<nt%>%<sg%>%<acc%>:ע # ;
+%<attr%>%<def%>%<nt%>%<sg%>%<dat%>:%{ע%}ן # ;
+%<attr%>%<ind%>%<nt%>%<sg%>%<nom%>: # ;
+%<attr%>%<ind%>%<nt%>%<sg%>%<acc%>: # ;
+%<attr%>%<ind%>%<nt%>%<sg%>%<dat%>: # ;
+! FIXME: figure out how to deal with "postpositive/nominalised" neuter forms,
+!      e.g. at https://en.wiktionary.org/wiki/%D7%92%D7%A8%D7%95%D7%99%D7%A1
+!      and how they're different from predicative forms
+%<attr%>%<mfn%>%<pl%>%<nom%>:%>ע # ;
+%<attr%>%<mfn%>%<pl%>%<acc%>:%>ע # ;
+%<attr%>%<mfn%>%<pl%>%<dat%>:%>ע # ;
+
+LEXICON ADJ-UML
+
+%<adj%>%<comp%>:%{ь2%}ער ADJ-COMMON ;
+%<adj%>%<sup%>:%{ь2%}%{ס%}ט ADJ-COMMON ;
+
+%<adj%>: ADJ-COMMON ;
+
+
 LEXICON DET-PERS-AGREEMENT
 
 %<attr%>%<m%>%<sg%>%<nom%>: # ;
@@ -439,7 +482,6 @@ LEXICON DET-PERS-AGREEMENT
 %<pred%>%<mfn%>%<pl%>%<nom%>:%>ע # ;
 %<pred%>%<mfn%>%<pl%>%<acc%>:%>ע # ;
 %<pred%>%<mfn%>%<pl%>%<dat%>:%>ע # ;
-
 
 LEXICON DET-PERS-P1SG
 
@@ -493,17 +535,29 @@ LEXICON Conjunctions
 
 און:און CC ; ! "and"
 אָדער:אָדער CC ; ! "or"
+אָבער:אָבער CC ; ! "but"
+
+װי:װי CNJSUB ; ! "how"
+װײַל:װײַל CNJSUB ; ! "because"
+װען:װען CNJSUB ; ! "when"
+אױב:אױב CNJSUB ; ! "if"
+
+
 
 LEXICON Adverbs
 
 װי:װי ADV-ITG ; ! "how"
 װי:װי PREADV ; ! "how"
-װי:װי CNJSUB ; ! "how"
 נישט:נישט ADV ; ! "not"
 נישט:ניט ADV ; ! "not" ! Dir/LR
 אױך:אױך ADV ; ! "also"
 מער:מער ADV ; ! "more"
-נאָך:נאָך PREADV ; ! "still"
+נאָך:נאָך PREADV ; ! "still"  ! FIXME: CHECK
+נאָך:נאָך ADV ; ! "still"
+הײַנט:הײַנט ADV ; ! "today"
+שױן:שױן ADV ; ! "already, yet"
+נאָר:נאָר PREADV ; ! "only"
+צוריק:צוריק ADV ; ! "back"
 
 
 LEXICON Prepositions
@@ -512,14 +566,17 @@ LEXICON Prepositions
 אין:אין PREP-EN ; ! "in"
 מיט:מיט PREP ; ! "with"
 איבער:איבער PREP ; ! "over, above; about"
-פֿאַר:פֿאַר PREP ; ! "for"
+פֿאַר:פֿאַר PREP-EN ; ! "for"
 ביז:ביז PREP ; ! "up to, until"
 אונטער:אונטער PREP ; ! "under"
 אױף:אױף PREP-EN ; ! "on, by"
 בײַ:בײַ PREP ; ! "у"
 דורך:דורך PREP ; ! "through"
 צו:צו PREP-EN ; ! "to"
-
+נאָך:נאָך PREP-EN ; ! "after"
+אַרום:אַרום PREP ; ! "around"
+קעגן:קעגן PREP ; ! "against"
+װי:װי PREP ; ! "like"
 
 
 LEXICON DetRoot
@@ -564,6 +621,11 @@ LEXICON NounRoot
 לאַן:לאַן N-M-N ; ! "meadow"
 טאָג:טאָג N-M-UML ; ! "day"
 קינד:קינד N-N-UML-ER ; ! "child" (technically no umlaut)
+צײַט:צײַט N-F-N ; ! "time"
+װעלט:װעלט N-F-N ; ! "world"
+לאַנד:לאַנד N-N-UML-ER ; ! "country, land"
+זון:זון N-F-N ; ! "sun"
+זון:זון N-M-UML ; ! "son"
 
 LEXICON VerbRoot
 %[%-pp%]:גע VerbStems ; ! past participle
@@ -598,7 +660,14 @@ Auxiliaries ;
 קױפֿן:קױפֿ V-REG ;
 פֿאַרלירן:פֿאַרליר V-REG-NOPREF ;
 בּעטן:בּעט V-STRONG-7 ;
+קומען:קום V-STRONG-7 ;
+מאַכן:מאַך V-REG ;
 
+LEXICON Adjectives
+
+גרױס:גרױס ADJ-UML ;
+אַלט:אַלט ADJ-UML ;
+יונג:יונג ADJ-UML ;
 
 LEXICON Punctuation
 
