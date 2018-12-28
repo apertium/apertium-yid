@@ -632,6 +632,7 @@ LEXICON Prepositions
 ביז:ביז PREP ; ! "up to, until"
 בײַ:בײַ PREP-EN ; ! "у"
 דורך:דורך PREP ; ! "through"
+זינט:זינט PREP ; ! "since"
 מיט:מיט PREP ; ! "with"
 נאָך:נאָך PREP-EN ; ! "after"
 פֿאַר:פֿאַר PREP-EN ; ! "for"
@@ -696,6 +697,7 @@ LEXICON NounRoot
 לאַן:לאַן N-M-N ; ! "meadow"
 לאַנד:לאַנד N-N-UML-ER ; ! "country, land"
 מענטש:מענטש N-M-N ; ! "human; mentsh, gentleman"
+נאָמען:נאָמען N-M-UML ; ! "name"  ! FIXME: irreg alternative plural נעמענער
 סטאַנציע:סטאַנציע N-F-S ; ! "station"
 צײַט:צײַט N-F-N ; ! "time"
 קינד:קינד N-N-UML-ER ; ! "child" (technically no umlaut)
@@ -748,6 +750,7 @@ LEXICON Adjectives
 גוט:גוט ADJ-NO-COMP ; ! "good"
 גרױס:גרױס ADJ-UML ; ! "big"
 יונג:יונג ADJ-UML ; ! "young"
+פּאָפּולער:פּאָפּולער ADJ ; ! "popular"
 שטאַרק:שטאַרק ADJ ; ! "strong"
 שלעכט:ערג ADJ-IRREG-COMP ; ! "worse/worst"
 שלעכט:שלעכט ADJ-NO-COMP ; ! "bad"
@@ -758,6 +761,7 @@ LEXICON ProperNouns
 אַמעריקע:אַמעריקע NP-TOP ; ! "America"
 דײַטשלאַנד:דײַטשלאַנד NP-TOP ; ! "Germany"
 ישראל:ישראל NP-TOP ; ! "Israel"
+לאָס% אַנדזשעלעס:לאָס% אַנדזשעלעס NP-TOP ; ! "Los Angeles"
 
 דוד:דוד NP-ANT-M ; ! "Dovid"
 ישראל:ישראל NP-ANT-M ; ! "Yisroel"
