@@ -290,6 +290,13 @@ LEXICON V-REG-NOPREF
 V-COMMON ;
 %<v%>%<pp%>:%>ט # ;
 
+LEXICON V-NOPP
+
+V-COMMON ;
+
+LEXICON V-STRONG-IRREG-PP
+
+%<v%>%<pp%>%[%+pp%]:%>%{ע%}ן # ;
 
 LEXICON V-STRONG-7
 ! class 7 strong verbs
@@ -727,6 +734,8 @@ Auxiliaries ;
 פֿאַרלירן:פֿאַרליר V-REG-NOPREF ; ! "lose"
 קומען:קום V-STRONG-7 ; ! "come"
 קױפֿן:קױפֿ V-REG ; ! "buy"
+װערן:װער V-NOPP ; ! "become"
+װערן:װאָר V-STRONG-IRREG-PP ; ! "become"
 
 LEXICON Adjectives
 
