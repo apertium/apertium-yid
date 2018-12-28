@@ -15,10 +15,12 @@ Multichar_Symbols
 %<preadv%> ! Preadverb
 %<cnjcoo%> ! Coordinating conjunction
 %<cnjsub%> ! Subordinating conjunction
+%<np%>   ! Proper noun
 
 ! types of pronouns, determiners, and adjectives
 %<pers%> ! personal
 %<pos%>  ! personal possessive
+%<ref%>  ! reflexive
 %<attr%> ! attributive ("prepositive")
 %<pred%> ! predicative ("postpositive", nominalised)
 %<itg%>  ! interrogative
@@ -56,6 +58,12 @@ Multichar_Symbols
 %<pp%>   ! past participle
 %<pprs%> ! present participle
 %<imp%>  ! imperative
+
+! Proper noun types
+%<top%>  ! topographic (places)
+%<ant%>  ! anthroponyms (given names)
+%<cog%>  ! cognomens (family names)
+%<org%>  ! organisations
 
 ! Punctuation
 %<percent%>   ! Percent
@@ -122,6 +130,7 @@ Pronouns ;
 Punctuation ;
 Adverbs ;
 Adjectives ;
+ProperNouns ;
 
 
 !!! Format for noun lexica is N-[gender]-[class]
@@ -527,6 +536,19 @@ LEXICON PREADV
 
 %<preadv%>: # ;
 
+LEXICON NP-TOP
+
+%<np%>%<top%>: # ;
+
+LEXICON NP-ANT-M
+
+%<np%>%<ant%>%<m%>: # ;
+
+LEXICON NP-ANT-F
+
+%<np%>%<ant%>%<f%>: # ;
+
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -541,7 +563,7 @@ LEXICON Conjunctions
 װײַל:װײַל CNJSUB ; ! "because"
 װען:װען CNJSUB ; ! "when"
 אױב:אױב CNJSUB ; ! "if"
-
+אַז:אַז CNJSUB ; ! "that"
 
 
 LEXICON Adverbs
@@ -577,6 +599,7 @@ LEXICON Prepositions
 אַרום:אַרום PREP ; ! "around"
 קעגן:קעגן PREP ; ! "against"
 װי:װי PREP ; ! "like"
+צװישן:צװישן PREP ; ! "between"
 
 
 LEXICON DetRoot
@@ -586,7 +609,7 @@ LEXICON DetRoot
 דאָס:ד DET-DEF-N ; ! "the"
 די:ד DET-DEF-PL ; ! "the"
 אַ:אַ DET-INDEF ; ! "a"
-!אַן:אַן DET-INDEF ; ! "an"
+אַ:אַן DET-INDEF ; ! "an" ! Dir/LR
 
 מײַן:מײַן DET-PERS-P1SG ;
 דײַן:דײַן DET-PERS-P2SG ;
@@ -609,6 +632,7 @@ PRON-P3-PL ;
 װאָס%<prn%>%<itg%>%<nom%>:װאָס # ;
 װאָס%<prn%>%<itg%>%<acc%>:װאָס # ;
 װאָס%<prn%>%<itg%>%<dat%>:װאָס # ;
+זיך%<prn%>%<ref%>:זיך # ;
 
 LEXICON NounRoot
 
@@ -668,6 +692,11 @@ LEXICON Adjectives
 גרױס:גרױס ADJ-UML ;
 אַלט:אַלט ADJ-UML ;
 יונג:יונג ADJ-UML ;
+
+LEXICON ProperNouns
+
+ישראל:ישראל NP-TOP ;
+ישראל:ישראל NP-ANT-M ;
 
 LEXICON Punctuation
 
