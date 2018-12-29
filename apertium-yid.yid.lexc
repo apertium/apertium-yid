@@ -406,12 +406,21 @@ LEXICON VAux-VEL-VE
 
 %<vaux%>: VAux-COMMON-DEL ;
 
+LEXICON VAux-REG-INFL
+
+%<pres%>%<p1%>%<sg%>: # ;
+%<pres%>%<p2%>%<sg%>:%>סט # ;
+%<pres%>%<p3%>%<sg%>: # ;
+%<pres%>%<p1%>%<pl%>:%>ן # ;
+%<pres%>%<p2%>%<pl%>:%>ט # ;
+%<pres%>%<p3%>%<pl%>:%>ן # ;
+
+%<pp%>%[%+pp%]:ט # ;
+
 LEXICON VAux-REG
 
 %<vaux%>: V-COMMON-INF ;
-%<vaux%>: VAux-COMMON-NODEL ;
-%<vaux%>: VAux-COMMON-DEL ;
-%<vaux%>%<pp%>%[%+pp%]:ט # ;
+%<vaux%>: VAux-REG-INFL ;
 
 LEXICON CC
 
@@ -634,6 +643,15 @@ LEXICON Conjunctions
 
 LEXICON Adverbs
 
+װוּ:װאו ADV-ITG ; ! "where" ! Dir/LR
+װוּ:װוּ ADV-ITG ; ! "where"
+װוּהין:װאוהין ADV-ITG ; ! "whither"
+װוּהין:װוּהין ADV-ITG ; ! "whither"
+װי:װי ADV-ITG ; ! "how"
+װען:װען ADV-ITG ; ! "when"
+
+װי:װי PREADV ; ! "how"
+
 אַזױ:אַזױ ADV ; ! "thus"
 אַרױס:אַרױס ADV ; ! "out"
 אַרײַן:אַרײַן ADV ; ! "in, inside"
@@ -650,9 +668,6 @@ LEXICON Adverbs
 פֿאַראַן:פֿאַראַן ADV ; ! "there"
 צוריק:צוריק ADV ; ! "back"
 שױן:שױן ADV ; ! "already, yet"
-װי:װי ADV-ITG ; ! "how"
-װי:װי PREADV ; ! "how"
-װען:װען ADV-ITG ; ! "when"
 
 LEXICON Prepositions
 
@@ -765,14 +780,15 @@ LEXICON IrregularVerbs
 
 LEXICON Auxiliaries
 
-האָבן:האָב VAux-HOBN-HOB ;
+האָבן:האָב VAux-HOBN-HOB ; ! "have"
 האָבן:האָ VAux-HOBN-HO ;
 האָבן:האַ VAux-HOBN-HA ;
 
-װעל:װעל VAux-VEL-VEL ;
+װעל:װעל VAux-VEL-VEL ; ! "will"
 װעל:װע VAux-VEL-VE ;
 
 קענען:קענ VAux-REG ; ! "can"
+זאָלן:זאָלן VAux-REG ; ! "should"
 
 LEXICON VerbStems
 
