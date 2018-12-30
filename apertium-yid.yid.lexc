@@ -221,9 +221,14 @@ LEXICON N-M-HEB-N
 %<n%>%<m%>%<sg%>: # ;
 %<n%>%<m%>%<pl%>:נים # ;
 
+LEXICON N-M-NOPL
+
+%<n%>%<m%>%<sg%>: # ;
+
 LEXICON N-F-HEB
 
-%<n%>%<f%>%<sg%>: # ;
+%<n%>%<f%>%<sg%>:ה # ;
+%<n%>%<f%>%<pl%>:ות # ;
 
 LEXICON N-M-REBE
 
@@ -635,6 +640,12 @@ LEXICON NUM-ORD
 
 %<num%>%<ord%>: # ;
 
+LEXICON NUM-ORD-ADJ
+
+%<num%>%<ord%>: # ;
+%<num%>%<ord%>: ADJ-INFL-ENDINGS ;
+
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
@@ -753,22 +764,28 @@ LEXICON NounRoot
 בּאַרג:בּאַרג N-M-UML ; ! "mountain"
 בּױם:בּ%{ױ%}ם N-M-UML-ER ; ! "tree" plural with ײ
 בוך:בוך N-N-UML-ER ; ! "book"
+דרום:דרום N-M-NOPL ; ! "south"
 הימל:הימל N-M-N ; ! "heaven"
 הױז:הױז N-N-UML-ER ; ! "house" plural with ײַ
 זון:זון N-F-N ; ! "sun"
 זון:זון N-M-UML ; ! "son"
 טאָג:טאָג N-M-UML ; ! "day"
+טאָכטער:טאָכטער N-F-UML ; ! "daughter"
 טײל:טײל N-F-N ; ! "part"
 יאָר:יאָר N-M-N ; ! "year"
+ייִד:ייִד N-M-N ; ! "Jew"
 לאַן:לאַן N-M-N ; ! "meadow"
 לאַנד:לאַנד N-N-UML-ER ; ! "country, land"
+מזרח:מזרח N-M-NOPL ; ! "east"
 מיטן:מיטן N-M-S ; ! "middle"
 מענטש:מענטש N-M-N ; ! "human; mentsh, gentleman"
+מערבֿ:מערבֿ N-M-NOPL ; ! "west"
 נאָמען:נאָמען N-M-UML ; ! "name"  ! FIXME: irreg alternative plural נעמענער
 סטאַנציע:סטאַנציע N-F-S ; ! "station"
 ספֿר:ספֿר N-M-HEB ; ! "seyfer (religious book)"
 פֿאָטער:פֿאָטער N-M-S ; ! "father"
 פֿרײַנד:פֿרײַנד N-M-NULL ; ! "friend"
+צפֿון:צפֿון N-M-NOPL ; ! "north"
 צײַט:צײַט N-F-N ; ! "time"
 קינד:קינד N-N-UML-ER ; ! "child" (technically no umlaut)
 רבֿ:רבֿ N-M-HEB-N ; ! "rov (rabbi)" (pl: rabonem)
@@ -865,7 +882,7 @@ LEXICON Numerals
 צען:צען NUM ;
 
 
-אײנס:ערשט NUM-ORD ;
+אײנס:ערשט NUM-ORD-ADJ ;
 צװײ:צװײט NUM-ORD ;
 דרײַ:דריט NUM-ORD ;
 פֿיר:פֿערט NUM-ORD ;
