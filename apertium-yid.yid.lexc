@@ -134,6 +134,7 @@ Adverbs ;
 Adjectives ;
 ProperNouns ;
 Titles ;
+Numerals ;
 
 
 !!! Format for noun lexica is N-[gender]-[class]
@@ -622,6 +623,14 @@ LEXICON NP-ANT-F
 
 %<np%>%<ant%>%<f%>: # ;
 
+LEXICON NUM
+
+%<num%>: # ;
+
+LEXICON NUM-ORD
+
+%<num%>%<ord%>: # ;
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
@@ -828,6 +837,31 @@ LEXICON ProperNouns
 
 דוד:דוד NP-ANT-M ; ! "Dovid"
 ישראל:ישראל NP-ANT-M ; ! "Yisroel"
+
+LEXICON Numerals
+
+אײנס:אײנס NUM ;
+צװײ:צװײ NUM ;
+דרײַ:דרײַ NUM ;
+פֿיר:פֿיר NUM ;
+פֿינף:פֿינף NUM ;
+זעקס:זעקס NUM ;
+זיבן:זיבן NUM ;
+אַכט:אַכט NUM ;
+נײַן:נײַן NUM ;
+צען:צען NUM ;
+
+
+אײנס:ערשט NUM-ORD ;
+צװײ:צװײט NUM-ORD ;
+דרײַ:דריט NUM-ORD ;
+פֿיר:פֿערט NUM-ORD ;
+פֿינף:פֿינפֿט NUM-ORD ;
+זעקס:זעקסט NUM-ORD ;
+זיבן:זיבעט NUM-ORD ;
+אַכט:אַכט NUM-ORD ;
+נײַן:נײַנט NUM-ORD ;
+צען:צענט NUM-ORD ;
 
 LEXICON Titles
 
