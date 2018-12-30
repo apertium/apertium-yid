@@ -518,6 +518,10 @@ LEXICON ADJ
 
 %<adj%>: ADJ-COMMON ;
 
+LEXICON ADJ-BARE
+
+%<adj%>: # ;
+
 LEXICON ADJ-NO-COMP
 
 %<adj%>: ADJ-COMMON ;
@@ -722,6 +726,8 @@ LEXICON DetRoot
 
 װעלך:װעלך DET-ITG ; ! "which"
 אַלע:אַלע DET-QNT ; ! "all"
+אַ% סך:אַ% סך DET-QNT ; ! "a lot"
+אַ% סך:אַסאַך DET-QNT ; ! "a lot"
 
 
 LEXICON Pronouns
@@ -797,7 +803,7 @@ LEXICON Auxiliaries
 װעל:װע VAux-VEL-VE ;
 
 קענען:קענ VAux-REG ; ! "can"
-זאָלן:זאָלן VAux-REG ; ! "should"
+זאָלן:זאָל VAux-REG ; ! "should"
 
 LEXICON VerbStems
 
@@ -820,7 +826,9 @@ LEXICON Adjectives
 אַנדער:אַנדער ADJ-NO-COMP ; ! "different"
 גוט:בעס ADJ-IRREG-COMP ; ! "better/best"
 גוט:גוט ADJ-NO-COMP ; ! "good"
+געבױרן:געבױרן ADJ-BARE ; ! "born"
 גרױס:גרױס ADJ-UML ; ! "big"
+הױפּט:הױפּט ADJ-NO-COMP ; ! "head, main"
 יונג:יונג ADJ-UML ; ! "young"
 פּאָפּולער:פּאָפּולער ADJ ; ! "popular"
 שטאַרק:שטאַרק ADJ ; ! "strong"
@@ -837,10 +845,12 @@ LEXICON ProperNouns
 
 דוד:דוד NP-ANT-M ; ! "Dovid"
 ישראל:ישראל NP-ANT-M ; ! "Yisroel"
+משה:משה NP-ANT-M ; ! "Moyshe"
 
 LEXICON Numerals
 
-אײנס:אײנס NUM ;
+אײנס:אײנס NUM ;  ! FIXME: counting 1
+אײן:אײן NUM ;    ! FIXME: number one; also TODO: inflected forms of אײן
 צװײ:צװײ NUM ;
 דרײַ:דרײַ NUM ;
 פֿיר:פֿיר NUM ;
