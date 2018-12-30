@@ -20,7 +20,7 @@ Rules
 Cx:Cy <=> _ :0* [ :Cons | :Vowel ] ;
       where
           Cx in ( ם ן ך ף ץ )
-          Cy in ( מ נ כ פ צ )
+          Cy in ( מ נ כ פֿ צ )
       matched ;
 
 "Change non-final letters to non-final when word-final"

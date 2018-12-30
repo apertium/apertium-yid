@@ -766,6 +766,7 @@ LEXICON NounRoot
 מענטש:מענטש N-M-N ; ! "human; mentsh, gentleman"
 נאָמען:נאָמען N-M-UML ; ! "name"  ! FIXME: irreg alternative plural נעמענער
 סטאַנציע:סטאַנציע N-F-S ; ! "station"
+ספֿר:ספֿר N-M-HEB ; ! "seyfer (religious book)"
 פֿאָטער:פֿאָטער N-M-S ; ! "father"
 פֿרײַנד:פֿרײַנד N-M-NULL ; ! "friend"
 צײַט:צײַט N-F-N ; ! "time"
@@ -802,8 +803,9 @@ LEXICON Auxiliaries
 װעל:װעל VAux-VEL-VEL ; ! "will"
 װעל:װע VAux-VEL-VE ;
 
-קענען:קענ VAux-REG ; ! "can"
+דאַרפֿן:דאַרף VAux-REG ; ! "have to, ought to, must"
 זאָלן:זאָל VAux-REG ; ! "should"
+קענען:קענ VAux-REG ; ! "can"
 
 LEXICON VerbStems
 
@@ -811,14 +813,15 @@ IrregularVerbs ;
 Auxiliaries ; 
 
 בּעטן:בּעט V-STRONG-7 ; ! "ask"
+דאַרפֿן:דאַרף V-REG ; ! "need, require"
 זאָגן:זאָג V-REG ; ! "say"
 מאַכן:מאַך V-REG ; ! "make"
 פֿאַרלירן:פֿאַרליר V-REG-NOPREF ; ! "lose"
 קומען:קום V-STRONG-7 ; ! "come"
-קױפֿן:קױפֿ V-REG ; ! "buy"
-װערן:װער V-NOPP ; ! "become"
-װערן:װאָר V-STRONG-IRREG-PP ; ! "become"
 קענען:קענ V-REG ; ! "know"
+קױפֿן:קױפֿ V-REG ; ! "buy"
+װערן:װאָר V-STRONG-IRREG-PP ; ! "become"
+װערן:װער V-NOPP ; ! "become"
 
 LEXICON Adjectives
 
