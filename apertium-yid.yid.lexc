@@ -225,6 +225,10 @@ LEXICON N-M-NOPL
 
 %<n%>%<m%>%<sg%>: # ;
 
+LEXICON N-F-NOPL
+
+%<n%>%<f%>%<sg%>: # ;
+
 LEXICON N-F-HEB
 
 %<n%>%<f%>%<sg%>:ה # ;
@@ -761,8 +765,10 @@ PRON-P3-PL ;
 LEXICON NounRoot
 
 אַרבעט:אַרבעט N-F-S ; ! "work"
+אײַזנבאַן:אײַזנבאַן N-F-N ; ! "railroad"
 בּאַרג:בּאַרג N-M-UML ; ! "mountain"
 בּױם:בּ%{ױ%}ם N-M-UML-ER ; ! "tree" plural with ײ
+באַן:באַן N-F-N ; ! "train, railroad"
 בוך:בוך N-N-UML-ER ; ! "book"
 דרום:דרום N-M-NOPL ; ! "south"
 הימל:הימל N-M-N ; ! "heaven"
@@ -773,7 +779,9 @@ LEXICON NounRoot
 טאָכטער:טאָכטער N-F-UML ; ! "daughter"
 טײל:טײל N-F-N ; ! "part"
 יאָר:יאָר N-M-N ; ! "year"
+ייִד:איד N-M-N ; ! "Jew" ! Dir/LR
 ייִד:ייִד N-M-N ; ! "Jew"
+ישיבה:ישיב N-F-HEB ; ! "yeshiva"
 לאַן:לאַן N-M-N ; ! "meadow"
 לאַנד:לאַנד N-N-UML-ER ; ! "country, land"
 מזרח:מזרח N-M-NOPL ; ! "east"
@@ -783,8 +791,10 @@ LEXICON NounRoot
 נאָמען:נאָמען N-M-UML ; ! "name"  ! FIXME: irreg alternative plural נעמענער
 סטאַנציע:סטאַנציע N-F-S ; ! "station"
 ספֿר:ספֿר N-M-HEB ; ! "seyfer (religious book)"
+פּאָיעזד:פּאָיעזד N-M-N ; ! "train"
 פֿאָטער:פֿאָטער N-M-S ; ! "father"
 פֿרײַנד:פֿרײַנד N-M-NULL ; ! "friend"
+צוג:צוג N-M-N ; ! "train"
 צפֿון:צפֿון N-M-NOPL ; ! "north"
 צײַט:צײַט N-F-N ; ! "time"
 קינד:קינד N-N-UML-ER ; ! "child" (technically no umlaut)
@@ -792,8 +802,10 @@ LEXICON NounRoot
 רבי:רבי N-M-REBE ; ! "rebe (rabbi)"
 שטאַט:שטאַט N-M-N ; ! "state"
 שװעסטער:שװעסטער N-F-NULL ; ! "sister"
+תּורה:תּורה N-F-NOPL ; ! "Torah (Hebrew bible)"
 װאַסער:װאַסער N-N-N ; ! "water"
 װעלט:װעלט N-F-N ; ! "world"
+
 
 LEXICON VerbRoot
 %[%-pp%]:גע VerbStems ; ! past participle
