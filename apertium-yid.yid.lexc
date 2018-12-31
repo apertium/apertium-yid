@@ -109,12 +109,13 @@ Multichar_Symbols
 בֿ
 כּ
 כֿ
-ךֿ
 פֿ
 פּ
+תּ
 יי
 וו
 וי
+ייִ
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -768,7 +769,7 @@ LEXICON NounRoot
 אײַזנבאַן:אײַזנבאַן N-F-N ; ! "railroad"
 בּאַרג:בּאַרג N-M-UML ; ! "mountain"
 בּױם:בּ%{ױ%}ם N-M-UML-ER ; ! "tree" plural with ײ
-באַן:באַן N-F-N ; ! "train, railroad"
+בּאַן:בּאַן N-F-N ; ! "train, railroad"
 בוך:בוך N-N-UML-ER ; ! "book"
 דרום:דרום N-M-NOPL ; ! "south"
 הימל:הימל N-M-N ; ! "heaven"
