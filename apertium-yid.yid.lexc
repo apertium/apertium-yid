@@ -90,6 +90,7 @@ Multichar_Symbols
 %{ױ%}    ! for ױ to ײ umlaut correspondence
 %{ע%}    ! ע or empty; in -{ע}ן is empty except after נ and ל
 %{ס%}    ! ס in סט superlative, deletes after other ס
+%{ן%}    ! ן sometimes ם
 
 ! matched features
 %[%+pp%] ! past participle
@@ -440,9 +441,9 @@ LEXICON CC
 LEXICON PREP-EN
 
 PREP ;
-%<pr%>%+דער%<det%>%<m%>%<acc%>:%>%{ע%}ן # ;
-%<pr%>%+דער%<det%>%<m%>%<dat%>:%>%{ע%}ן # ;
-%<pr%>%+דאָס%<det%>%<nt%>%<dat%>:%>%{ע%}ן # ;
+%<pr%>%+דער%<det%>%<m%>%<acc%>:%>%{ע%}%{ן%} # ;
+%<pr%>%+דער%<det%>%<m%>%<dat%>:%>%{ע%}%{ן%} # ;
+%<pr%>%+דאָס%<det%>%<nt%>%<dat%>:%>%{ע%}%{ן%} # ;
 
 LEXICON PREP
 
@@ -495,14 +496,14 @@ LEXICON ADJ-COMMON
 LEXICON ADJ-INFL-ENDINGS
 
 %<m%>%<sg%>%<nom%>:%>ער # ;
-%<m%>%<sg%>%<acc%>:%>%{ע%}ן # ;
-%<m%>%<sg%>%<dat%>:%>%{ע%}ן # ;
+%<m%>%<sg%>%<acc%>:%>%{ע%}%{ן%} # ;
+%<m%>%<sg%>%<dat%>:%>%{ע%}%{ן%} # ;
 %<f%>%<sg%>%<nom%>:%>ע # ;
 %<f%>%<sg%>%<acc%>:%>ע # ;
 %<f%>%<sg%>%<dat%>:%>ער # ;
 %<def%>%<nt%>%<sg%>%<nom%>:%>ע # ;
 %<def%>%<nt%>%<sg%>%<acc%>:%>ע # ;
-%<def%>%<nt%>%<sg%>%<dat%>:%>%{ע%}ן # ;
+%<def%>%<nt%>%<sg%>%<dat%>:%>%{ע%}%{ן%} # ;
 %<ind%>%<nt%>%<sg%>%<nom%>: # ;
 %<ind%>%<nt%>%<sg%>%<acc%>: # ;
 %<ind%>%<nt%>%<sg%>%<dat%>: # ;
@@ -557,14 +558,14 @@ LEXICON DET-PERS-AGREEMENT
 %<attr%>%<mfn%>%<pl%>%<dat%>:%>ע # ;
 
 %<pred%>%<m%>%<sg%>%<nom%>:%>ער # ;
-%<pred%>%<m%>%<sg%>%<acc%>:%>%{ע%}ן # ;
-%<pred%>%<m%>%<sg%>%<dat%>:%>%{ע%}ן # ;
+%<pred%>%<m%>%<sg%>%<acc%>:%>%{ע%}%{ן%} # ;
+%<pred%>%<m%>%<sg%>%<dat%>:%>%{ע%}%{ן%} # ;
 %<pred%>%<f%>%<sg%>%<nom%>:%>ע # ;
 %<pred%>%<f%>%<sg%>%<acc%>:%>ע # ;
 %<pred%>%<f%>%<sg%>%<dat%>:%>ער # ;
 %<pred%>%<nt%>%<sg%>%<nom%>:%>ס # ;
 %<pred%>%<nt%>%<sg%>%<acc%>:%>ס # ;
-%<pred%>%<nt%>%<sg%>%<dat%>:%>%{ע%}ן # ;
+%<pred%>%<nt%>%<sg%>%<dat%>:%>%{ע%}%{ן%} # ;
 %<pred%>%<mfn%>%<pl%>%<nom%>:%>ע # ;
 %<pred%>%<mfn%>%<pl%>%<acc%>:%>ע # ;
 %<pred%>%<mfn%>%<pl%>%<dat%>:%>ע # ;
@@ -767,10 +768,11 @@ LEXICON NounRoot
 
 אַרבעט:אַרבעט N-F-S ; ! "work"
 אײַזנבאַן:אײַזנבאַן N-F-N ; ! "railroad"
+בּאַן:בּאַן N-F-N ; ! "train, railroad"
 בּאַרג:בּאַרג N-M-UML ; ! "mountain"
 בּױם:בּ%{ױ%}ם N-M-UML-ER ; ! "tree" plural with ײ
-בּאַן:בּאַן N-F-N ; ! "train, railroad"
 בוך:בוך N-N-UML-ER ; ! "book"
+געלט:געלט N-N-UML-ER ; ! "money"  NOTE: no umlaut [possible]
 דרום:דרום N-M-NOPL ; ! "south"
 הימל:הימל N-M-N ; ! "heaven"
 הױז:הױז N-N-UML-ER ; ! "house" plural with ײַ
@@ -785,8 +787,10 @@ LEXICON NounRoot
 ישיבה:ישיב N-F-HEB ; ! "yeshiva"
 לאַן:לאַן N-M-N ; ! "meadow"
 לאַנד:לאַנד N-N-UML-ER ; ! "country, land"
+לעבן:לעבן N-N-S ; ! "life"
 מזרח:מזרח N-M-NOPL ; ! "east"
 מיטן:מיטן N-M-S ; ! "middle"
+מלחמה:מלחמ N-F-HEB ; ! "war"
 מענטש:מענטש N-M-N ; ! "human; mentsh, gentleman"
 מערבֿ:מערבֿ N-M-NOPL ; ! "west"
 נאָמען:נאָמען N-M-UML ; ! "name"  ! FIXME: irreg alternative plural נעמענער
@@ -799,6 +803,7 @@ LEXICON NounRoot
 צפֿון:צפֿון N-M-NOPL ; ! "north"
 צײַט:צײַט N-F-N ; ! "time"
 קינד:קינד N-N-UML-ER ; ! "child" (technically no umlaut)
+קריג:קריג N-F-N ; ! "war"
 רבֿ:רבֿ N-M-HEB-N ; ! "rov (rabbi)" (pl: rabonem)
 רבי:רבי N-M-REBE ; ! "rebe (rabbi)"
 שטאַט:שטאַט N-M-N ; ! "state"
@@ -843,8 +848,11 @@ IrregularVerbs ;
 Auxiliaries ; 
 
 בּעטן:בּעט V-STRONG-7 ; ! "ask"
+געפֿינען:געפֿין V-NOPP ; ! "find"
+געפֿינען:פֿון V-STRONG-IRREG-PP ; ! "find"
 דאַרפֿן:דאַרף V-REG ; ! "need, require"
 זאָגן:זאָג V-REG ; ! "say"
+לעבן:לעב V-REG ; ! "live"
 מאַכן:מאַך V-REG ; ! "make"
 פֿאַרלירן:פֿאַרליר V-REG-NOPREF ; ! "lose"
 קומען:קום V-STRONG-7 ; ! "come"
@@ -852,6 +860,7 @@ Auxiliaries ;
 קױפֿן:קױפֿ V-REG ; ! "buy"
 װערן:װאָר V-STRONG-IRREG-PP ; ! "become"
 װערן:װער V-NOPP ; ! "become"
+
 
 LEXICON Adjectives
 
@@ -873,10 +882,14 @@ LEXICON ProperNouns
 
 אַמעריקע:אַמעריקע NP-TOP ; ! "America"
 דײַטשלאַנד:דײַטשלאַנד NP-TOP ; ! "Germany"
+ירושלים:ירושלים NP-TOP ; ! "Jerusalem"
 ישראל:ישראל NP-TOP ; ! "Israel"
 לאָס% אַנדזשעלעס:לאָס% אַנדזשעלעס NP-TOP ; ! "Los Angeles"
 
+אַבֿרהם:אַבֿרהם NP-ANT-M ; ! "Avrohem"
 דוד:דוד NP-ANT-M ; ! "Dovid"
+יוסף:יוסף NP-ANT-M ; ! "Yo(y)sef"
+יעקבֿ:יעקבֿ NP-ANT-M ; ! "Yankev"
 ישראל:ישראל NP-ANT-M ; ! "Yisroel"
 משה:משה NP-ANT-M ; ! "Moyshe"
 
