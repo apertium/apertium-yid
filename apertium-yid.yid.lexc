@@ -711,6 +711,7 @@ LEXICON Prepositions
 בײַ:בײַ PREP-EN ; ! "у"
 דורך:דורך PREP ; ! "through"
 זינט:זינט PREP ; ! "since"
+כּדי:כּדי PREP ; ! "in order (to)"
 מיט:מיט PREP-EN ; ! "with"
 נאָך:נאָך PREP-EN ; ! "after"
 פֿאַר:פֿאַר PREP-EN ; ! "for"
@@ -887,11 +888,14 @@ LEXICON ProperNouns
 לאָס% אַנדזשעלעס:לאָס% אַנדזשעלעס NP-TOP ; ! "Los Angeles"
 
 אַבֿרהם:אַבֿרהם NP-ANT-M ; ! "Avrohem"
+אהרן:אהרן NP-ANT-M ; ! "Arn"
 דוד:דוד NP-ANT-M ; ! "Dovid"
 יוסף:יוסף NP-ANT-M ; ! "Yo(y)sef"
 יעקבֿ:יעקבֿ NP-ANT-M ; ! "Yankev"
+יצחק:יצחק NP-ANT-M ; ! "Yitskhok"
 ישראל:ישראל NP-ANT-M ; ! "Yisroel"
 משה:משה NP-ANT-M ; ! "Moyshe"
+מאיר:מאיר NP-ANT-M ; ! "Meyer"
 
 LEXICON Numerals
 
