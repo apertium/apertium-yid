@@ -37,6 +37,9 @@ Cx:Cy <=> _ .#. ;
 "Delete final ט of verb stems when ט follows"
 ט:0 <=> _ %>: :ט .#. ;
 
+"Delete final ס of verb stems when ס follows"
+ס:0 <=> _ %>: :ס :ט .#. ;
+
 "Final ן is ם after stems ending with ן or vowels"
 %{ן%}:ם <=> ן: %>: %{ע%}: _ .#. ;
             [ :ײַ | :ו ] %>: %{ע%}: _ .#. ;
@@ -50,7 +53,7 @@ Cx:Cy <=> _ .#. ;
 !!!!!!!! VOWEL RULES !!!!!!!!
 
 "Epenthesise ע as needed"
-%{ע%}:ע <=> [ :מ | :נ | :ל ]/:0 _ [ ן: | %{ן%}: ] ;  ! after ל, מ, נ in ן suffixes
+%{ע%}:ע <=> [ [ :נ :ג ] | :מ | :נ | :ל ]/:0 _ [ ן: | %{ן%}: ] ;  ! after ל, מ, נ, נג in ן suffixes
             [ :מ | :ײַ | :ו ]/:0 _ :נ ;       ! after ײַ and מ in pprs
 
 
