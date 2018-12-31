@@ -15,6 +15,7 @@ Multichar_Symbols
 %<preadv%> ! Preadverb
 %<cnjcoo%> ! Coordinating conjunction
 %<cnjsub%> ! Subordinating conjunction
+%<cnjadv%> ! Conjunctive adverb
 %<np%>   ! Proper noun
 %<title%>  ! title
 
@@ -352,6 +353,23 @@ LEXICON V-STRONG-7
 V-COMMON ;
 %<v%>%<pp%>%[%+pp%]:%>%{ע%}ן # ;
 
+LEXICON V-TON-TU
+
+%<v%>%<pres%>%<p1%>%<sg%>: V-FINAL-PARTICLE ;
+%<v%>%<pres%>%<p2%>%<sg%>:%>סט V-FINAL-PARTICLE ;
+%<v%>%<pres%>%<p3%>%<sg%>:%>ט V-FINAL-PARTICLE ;
+%<v%>%<pres%>%<p1%>%<pl%>:%>%{ע%}ן V-FINAL-PARTICLE ;
+%<v%>%<pres%>%<p2%>%<pl%>:%>ט V-FINAL-PARTICLE ;
+%<v%>%<pres%>%<p3%>%<pl%>:%>%{ע%}ן V-FINAL-PARTICLE ;
+
+%<v%>: V-COMMON-IMP ;
+%<v%>: V-COMMON-PPRS ;
+
+LEXICON V-TON-TO
+
+%<v%>: V-COMMON-INF ;
+%<v%>%<pp%>%[%+pp%]:%>%{ע%}ן V-INITIAL-PARTICLE ;
+
 LEXICON V-ZAYN-ZE
 
 %<v%>%<pres%>%<p1%>%<pl%>:%>נען # ;
@@ -639,6 +657,10 @@ LEXICON CNJSUB
 
 %<cnjsub%>: # ;
 
+LEXICON CNJADV
+
+%<cnjadv%>: # ;
+
 LEXICON PREADV
 
 %<preadv%>: # ;
@@ -683,6 +705,7 @@ LEXICON Conjunctions
 
 אַז:אַז CNJSUB ; ! "that"
 אַלס:אַלס CNJSUB ; ! "when"
+אַפֿילו:אַפֿילו CNJSUB ; ! "even though; despite"
 אױב:אױב CNJSUB ; ! "if"
 װי:װי CNJSUB ; ! "how"
 װען:װען CNJSUB ; ! "when"
@@ -792,42 +815,57 @@ PRON-P3-PL ;
 
 LEXICON NounRoot
 
+אַפּריל:אַפּריל N-M-N ; ! "April"
 אַרבעט:אַרבעט N-F-S ; ! "work"
+אָקטאָבער:אָקטאָבער N-M-S ; ! "October"
+אױגוסט:אױגוסט N-M-N ; ! "August" CHECK: PL in N?
 אײַזנבאַן:אײַזנבאַן N-F-N ; ! "railroad"
 בּאַן:בּאַן N-F-N ; ! "train, railroad"
 בּאַרג:בּאַרג N-M-UML ; ! "mountain"
 בּױם:בּ%{ױ%}ם N-M-UML-ER ; ! "tree" plural with ײ
 בוך:בוך N-N-UML-ER ; ! "book"
 געלט:געלט N-N-UML-ER ; ! "money"  NOTE: no umlaut [possible]
+דעצעמבער:דעצעמבער N-M-S ; ! "December"
+דעצעמבער:דעצעמבער N-M-S ; ! "December"
 דרום:דרום N-M-NOPL ; ! "south"
 הימל:הימל N-M-N ; ! "heaven"
 הױז:הױז N-N-UML-ER ; ! "house" plural with ײַ
 זון:זון N-F-N ; ! "sun"
 זון:זון N-M-UML ; ! "son"
+חסיד:חסיד N-M-HEB ; ! "khosid (Hassid)"
 טאָג:טאָג N-M-UML ; ! "day"
 טאָכטער:טאָכטער N-F-UML ; ! "daughter"
 טײל:טײל N-F-N ; ! "part"
+יאַנואַר:יאַנואַר N-M-N ; ! "January"
 יאָר:יאָר N-M-N ; ! "year"
+יולי:יולי N-M-S ; ! "July"
+יוני:יוני N-M-S ; ! "June"
 ייִד:איד N-M-N ; ! "Jew" ! Dir/LR
 ייִד:ייִד N-M-N ; ! "Jew"
 ישיבה:ישיב N-F-HEB ; ! "yeshiva"
 לאַן:לאַן N-M-N ; ! "meadow"
 לאַנד:לאַנד N-N-UML-ER ; ! "country, land"
 לעבן:לעבן N-N-S ; ! "life"
+מאַרץ:מאַרץ N-M-N ; ! "March"
 מזרח:מזרח N-M-NOPL ; ! "east"
 מיטן:מיטן N-M-S ; ! "middle"
 מלחמה:מלחמ N-F-HEB ; ! "war"
 מענטש:מענטש N-M-N ; ! "human; mentsh, gentleman"
 מערבֿ:מערבֿ N-M-NOPL ; ! "west"
+מײַ:מײַ N-N-N ; ! "May" CHECK: PL in N?
 נאָמען:נאָמען N-M-UML ; ! "name"  ! FIXME: irreg alternative plural נעמענער
+נאָװעמבער:נאָװעמבער N-M-S ; ! "November"
 סטאַנציע:סטאַנציע N-F-S ; ! "station"
+סעפּטעמבער:סעפּטעמבער N-M-S ; ! "September" CHECK: PL in S?
 ספֿר:ספֿר N-M-HEB ; ! "seyfer (religious book)"
 פּאָיעזד:פּאָיעזד N-M-N ; ! "train"
 פֿאָטער:פֿאָטער N-M-S ; ! "father"
+פֿעברואַר:פֿעברואַר N-M-N ; ! "February" CHECK: PL in N?
 פֿרײַנד:פֿרײַנד N-M-NULL ; ! "friend"
 צוג:צוג N-M-N ; ! "train"
 צפֿון:צפֿון N-M-NOPL ; ! "north"
 צײַט:צײַט N-F-N ; ! "time"
+קאַלענדאָר:קאַלענדאַר N-M-N ; ! "calendar"
 קינד:קינד N-N-UML-ER ; ! "child" (technically no umlaut)
 קריג:קריג N-F-N ; ! "war"
 רבֿ:רבֿ N-M-HEB-N ; ! "rov (rabbi)" (pl: rabonem)
@@ -836,7 +874,9 @@ LEXICON NounRoot
 שװעסטער:שװעסטער N-F-NULL ; ! "sister"
 תּורה:תּורה N-F-NOPL ; ! "Torah (Hebrew bible)"
 װאַסער:װאַסער N-N-N ; ! "water"
+װעג:װעג N-M-N ; ! "way"
 װעלט:װעלט N-F-N ; ! "world"
+
 
 
 LEXICON VerbRoot
@@ -881,14 +921,23 @@ Auxiliaries ;
 אַרבעטן:אַרבעט V-REG ; ! "work"
 אָנהײבן%[√on%]:הױב V-STRONG-IRREG-PP ; ! "begin"
 אָנהײבן%[√on%]:הײב V-NOPP ; ! "begin"
+אָנטאָן%[√on%]:טאָ V-TON-TO ; ! "put on clothes"
+אָנטאָן%[√on%]:טו V-TON-TU ; ! "put on clothes"
 בּעטן:בּעט V-STRONG-7 ; ! "ask"
+בלײַבן:בליב V-STRONG-IRREG-PP ; ! "stay"
+בלײַבן:בלײַב V-NOPP ; ! "stay"
 געפֿינען:געפֿין V-NOPP ; ! "find"
 געפֿינען:פֿון V-STRONG-IRREG-PP ; ! "find"
 דאַרפֿן:דאַרף V-REG ; ! "need, require"
 זאָגן:זאָג V-REG ; ! "say"
+טאָן:טאָ V-TON-TO ; ! "do"
+טאָן:טו V-TON-TU ; ! "do"
 לעבן:לעב V-REG ; ! "live"
 מאַכן:מאַך V-REG ; ! "make"
+נעמען:נום V-STRONG-IRREG-PP ; ! "took"
+נעמען:נעם V-NOPP ; ! "take"
 פֿאַרלירן:פֿאַרליר V-REG-NOPREF ; ! "lose"
+פֿאָרן:פֿאָר V-STRONG-7 ; ! "ride, drive, travel by animal/vehicle"
 קומען:קום V-STRONG-7 ; ! "come"
 קענען:קענ V-REG ; ! "know"
 קױפֿן:קױפֿ V-REG ; ! "buy"
@@ -897,7 +946,6 @@ Auxiliaries ;
 שרײַבן:שרײַב V-NOPP ; ! "write"
 װערן:װאָר V-STRONG-IRREG-PP ; ! "become"
 װערן:װער V-NOPP ; ! "become"
-
 
 LEXICON Adjectives
 
@@ -922,6 +970,12 @@ LEXICON ProperNouns
 ירושלים:ירושלים NP-TOP ; ! "Jerusalem"
 ישראל:ישראל NP-TOP ; ! "Israel"
 לאָס% אַנדזשעלעס:לאָס% אַנדזשעלעס NP-TOP ; ! "Los Angeles"
+ניו% יאָרק:ניו% יאָרק NP-TOP ; ! "New York"
+ניו% יאָרק:ניו%-יאָרק NP-TOP ; ! "New York" ! Dir/LR
+ניו% יאָרק:ניו%־יאָרק NP-TOP ; ! "New York" ! Dir/LR
+ענגלאַנד:ענגלאַנד NP-TOP ; ! "England"
+קאַנאַדע:קאַנאַדע NP-TOP ; ! "Canada"
+רוסלאַנד:רוסלאַנד NP-TOP ; ! "Russia"
 
 אַבֿרהם:אַבֿרהם NP-ANT-M ; ! "Avrohem"
 אהרן:אהרן NP-ANT-M ; ! "Arn"
@@ -931,7 +985,10 @@ LEXICON ProperNouns
 יצחק:יצחק NP-ANT-M ; ! "Yitskhok"
 ישראל:ישראל NP-ANT-M ; ! "Yisroel"
 מאיר:מאיר NP-ANT-M ; ! "Meyer"
+מנחם:מנחם NP-ANT-M ; ! "Menakhem"
+מענדל:מענדל NP-ANT-M ; ! "Mendl"
 משה:משה NP-ANT-M ; ! "Moyshe"
+נחמן:נחמן NP-ANT-M ; ! "Nakhman"
 
 LEXICON Numerals
 
