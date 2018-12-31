@@ -4,6 +4,12 @@ Alphabet
 %[%+pp%]:0
 %[%-pp%]:0
 
+%[%+←on%]:0
+%[%-←on%]:0
+%[%+→on%]:0
+%[%-→on%]:0
+%[√on%]:0
+
 ;
 
 
@@ -25,3 +31,37 @@ Sx:0 /<= _ ;
    where Sy in ( %[%-pp%] )
          Sx in ( %[%+pp%] )
 matched ;
+
+"Match prefix and root"
+Sx:0 /<= _ ;
+   except
+       _ :* Sr:0 :* Sy:0 ;
+   where Sx in ( %[%-←on%] %[%-→on%] )
+         Sy in ( %[%+←on%] %[%+→on%] )
+         Sr in ( %[√on%]   %[√on%]   )
+   matched ;
+
+!"Match prefix and root 2"
+!Sr:0 /<= _ ;
+!   except
+!       Sy:0 :* _ :* Sx:0 ;
+!   where Sy in ( %[%-←on%] %[%-→on%] )
+!         Sx in ( %[%+←on%] %[%+→on%] )
+!         Sr in ( %[√on%]   %[√on%]   )
+!matched ;
+
+"Match prefix and root 2"
+%[√on%]:0 /<= _ ;
+   except
+       %[%-←on%]:0 :* _ :* %[%+←on%]:0 ;
+       %[%-→on%]:0 :* _ :* %[%+→on%]:0 ;
+
+"Match prefix and root 3"
+Sx:0 /<= _ ;
+   except
+       Sy:0 :* Sr:0 :* _ ;
+   where Sy in ( %[%-←on%] %[%-→on%] )
+         Sx in ( %[%+←on%] %[%+→on%] )
+         Sr in ( %[√on%]   %[√on%]   )
+matched ;
+

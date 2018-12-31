@@ -96,6 +96,13 @@ Multichar_Symbols
 %[%+pp%] ! past participle
 %[%-pp%] ! past participle
 
+%[%+→on%]
+%[%-→on%]
+%[%+←on%]
+%[%-←on%]
+%[√on%]
+
+
 ! Regular umlaut correspondences:
 ! ו - י
 ! אָ - ע
@@ -273,14 +280,24 @@ LEXICON DET-INDEF
 %<det%>%<ind%>%<sg%>: # ;
 ! FIXME: deal with alternate אַן
 
+LEXICON V-FINAL-PARTICLE
+
+# ;  ! non-particle verbs
+%[%+→on%]:%#% אָן # ;
+
+LEXICON V-INITIAL-PARTICLE
+
+# ;  ! non-particle verbs
+%[%+←on%]: # ;
+
 LEXICON V-COMMON
 
-%<v%>%<pres%>%<p1%>%<sg%>: # ;
-%<v%>%<pres%>%<p2%>%<sg%>:%>סט # ;
-%<v%>%<pres%>%<p3%>%<sg%>:%>ט # ;
-%<v%>%<pres%>%<p1%>%<pl%>:%>%{ע%}ן # ;
-%<v%>%<pres%>%<p2%>%<pl%>:%>ט # ;
-%<v%>%<pres%>%<p3%>%<pl%>:%>%{ע%}ן # ;
+%<v%>%<pres%>%<p1%>%<sg%>: V-FINAL-PARTICLE ;
+%<v%>%<pres%>%<p2%>%<sg%>:%>סט V-FINAL-PARTICLE ;
+%<v%>%<pres%>%<p3%>%<sg%>:%>ט V-FINAL-PARTICLE ;
+%<v%>%<pres%>%<p1%>%<pl%>:%>%{ע%}ן V-FINAL-PARTICLE ;
+%<v%>%<pres%>%<p2%>%<pl%>:%>ט V-FINAL-PARTICLE ;
+%<v%>%<pres%>%<p3%>%<pl%>:%>%{ע%}ן V-FINAL-PARTICLE ;
 
 %<v%>: V-COMMON-INF ;
 %<v%>: V-COMMON-IMP ;
@@ -288,11 +305,11 @@ LEXICON V-COMMON
 
 LEXICON V-COMMON-INF
 
-%<inf%>:%>%{ע%}ן # ;
+%<inf%>:%>%{ע%}ן V-INITIAL-PARTICLE ;
 
 LEXICON V-COMMON-PPRS
 
-%<pprs%>:%>%{ע%}נדיק # ;
+%<pprs%>:%>%{ע%}נדיק V-INITIAL-PARTICLE ;
 
 LEXICON V-COMMON-IMP
 
@@ -301,25 +318,25 @@ V-COMMON-IMP-PL ;
 
 LEXICON V-COMMON-IMP-SG
 
-%<imp%>%<sg%>: # ;
+%<imp%>%<sg%>: V-FINAL-PARTICLE ;
 
 LEXICON V-COMMON-IMP-PL
 
-%<imp%>%<pl%>:%>ט # ;
+%<imp%>%<pl%>:%>ט V-FINAL-PARTICLE ;
 
 
 LEXICON V-REG
 ! Plain old weak verbs
 
 V-COMMON ;
-%<v%>%<pp%>%[%+pp%]:%>ט # ;
+%<v%>%<pp%>%[%+pp%]:%>ט V-INITIAL-PARTICLE ;
 
 
 LEXICON V-REG-NOPREF
 ! Weak verbs that take no prefix
 
 V-COMMON ;
-%<v%>%<pp%>:%>ט # ;
+%<v%>%<pp%>:%>ט V-INITIAL-PARTICLE ;
 
 LEXICON V-NOPP
 
@@ -327,7 +344,7 @@ V-COMMON ;
 
 LEXICON V-STRONG-IRREG-PP
 
-%<v%>%<pp%>%[%+pp%]:%>%{ע%}ן # ;
+%<v%>%<pp%>%[%+pp%]:%>%{ע%}ן V-INITIAL-PARTICLE ;
 
 LEXICON V-STRONG-7
 ! class 7 strong verbs
@@ -659,9 +676,10 @@ LEXICON NUM-ORD-ADJ
 
 LEXICON Conjunctions
 
-און:און CC ; ! "and"
-אָדער:אָדער CC ; ! "or"
 אָבער:אָבער CC ; ! "but"
+אָדער:אָדער CC ; ! "or"
+און:און CC ; ! "and"
+סײַ:סײַ CC ; ! "both/and"
 
 אַז:אַז CNJSUB ; ! "that"
 אַלס:אַלס CNJSUB ; ! "when"
@@ -703,6 +721,7 @@ LEXICON Prepositions
 
 אַלס:אַלס PREP ; ! "as"
 אַרום:אַרום PREP ; ! "around"
+אָן:אָן PREP ; ! "without"
 אונטער:אונטער PREP ; ! "under"
 איבער:איבער PREP ; ! "over, above; about"
 אין:אין PREP-EN ; ! "in"
@@ -711,12 +730,18 @@ LEXICON Prepositions
 בײַ:בײַ PREP-EN ; ! "у"
 דורך:דורך PREP ; ! "through"
 זינט:זינט PREP ; ! "since"
+זינט:זײַט PREP ; ! "since"
+זינט:צײַט PREP ; ! "since"
 כּדי:כּדי PREP ; ! "in order (to)"
+לעבן:לעבן PREP ; ! "next to"
+לעבן:נעבן PREP ; ! "next to"
+לױט:לױט PREP ; ! "according to"
 מיט:מיט PREP-EN ; ! "with"
 נאָך:נאָך PREP-EN ; ! "after"
 פֿאַר:פֿאַר PREP-EN ; ! "for"
 פֿון:פֿון PREP-EN ; ! "of, from"
 צו:צו PREP-EN ; ! "to"
+צוליב:צוליב PREP ; ! "because of"
 צװישן:צװישן PREP ; ! "between"
 קעגן:קעגן PREP ; ! "against"
 קײן:קײן PREP ; ! "to (+place)"
@@ -815,8 +840,13 @@ LEXICON NounRoot
 
 
 LEXICON VerbRoot
+
 %[%-pp%]:גע VerbStems ; ! past participle
 VerbStems ; ! other forms
+
+%[%-←on%]%[%-pp%]:אָנגע VerbStems ; ! past participle
+%[%-→on%]: VerbStems ; ! other forms
+%[%-←on%]:אָנ VerbStems ; ! other forms
 
 LEXICON IrregularVerbs
 
@@ -848,6 +878,9 @@ LEXICON VerbStems
 IrregularVerbs ; 
 Auxiliaries ; 
 
+אַרבעטן:אַרבעט V-REG ; ! "work"
+אָנהײבן%[√on%]:הױב V-STRONG-IRREG-PP ; ! "begin"
+אָנהײבן%[√on%]:הײב V-NOPP ; ! "begin"
 בּעטן:בּעט V-STRONG-7 ; ! "ask"
 געפֿינען:געפֿין V-NOPP ; ! "find"
 געפֿינען:פֿון V-STRONG-IRREG-PP ; ! "find"
@@ -859,6 +892,9 @@ Auxiliaries ;
 קומען:קום V-STRONG-7 ; ! "come"
 קענען:קענ V-REG ; ! "know"
 קױפֿן:קױפֿ V-REG ; ! "buy"
+רעדן:רעד V-REG ; ! "speak"
+שרײַבן:שריב V-STRONG-IRREG-PP ; ! "write"
+שרײַבן:שרײַב V-NOPP ; ! "write"
 װערן:װאָר V-STRONG-IRREG-PP ; ! "become"
 װערן:װער V-NOPP ; ! "become"
 
@@ -894,8 +930,8 @@ LEXICON ProperNouns
 יעקבֿ:יעקבֿ NP-ANT-M ; ! "Yankev"
 יצחק:יצחק NP-ANT-M ; ! "Yitskhok"
 ישראל:ישראל NP-ANT-M ; ! "Yisroel"
-משה:משה NP-ANT-M ; ! "Moyshe"
 מאיר:מאיר NP-ANT-M ; ! "Meyer"
+משה:משה NP-ANT-M ; ! "Moyshe"
 
 LEXICON Numerals
 
