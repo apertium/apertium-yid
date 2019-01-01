@@ -796,6 +796,7 @@ LEXICON DetRoot
 אַלע:אַלע DET-QNT ; ! "all"
 אַ% סך:אַ% סך DET-QNT ; ! "a lot"
 אַ% סך:אַסאַך DET-QNT ; ! "a lot"
+עטלעכע:עטלעכע DET-QNT ; ! "some (a few)"
 
 
 LEXICON Pronouns
@@ -828,11 +829,12 @@ LEXICON NounRoot
 באַפֿעלקערונג:באַפֿעלקערונג N-F-N ; ! "population"
 בוך:בוך N-N-UML-ER ; ! "book"
 געלט:געלט N-N-UML-ER ; ! "money"  NOTE: no umlaut [possible]
+געשיכטע:געשיכטע N-F-S ; ! "history"
 דעצעמבער:דעצעמבער N-M-S ; ! "December"
 דעצעמבער:דעצעמבער N-M-S ; ! "December"
 דרום:דרום N-M-NOPL ; ! "south"
 הימל:הימל N-M-N ; ! "heaven"
-היסטאריע:היסטאריע N-F-S ; ! "history" CHECK: noun class right?
+היסטאָריע:היסטאָריע N-F-S ; ! "history"
 הױז:הױז N-N-UML-ER ; ! "house" plural with ײַ
 זון:זון N-F-N ; ! "sun"
 זון:זון N-M-UML ; ! "son"
@@ -875,6 +877,7 @@ LEXICON NounRoot
 קריג:קריג N-F-N ; ! "war"
 רבֿ:רבֿ N-M-HEB-N ; ! "rov (rabbi)" (pl: rabonem)
 רבי:רבי N-M-REBE ; ! "rebe (rabbi)"
+רעגירונג:רעגירונג N-F-N ; ! "government"
 שטאַט:שטאַט N-M-N ; ! "state"
 שטאָט:שטאָט N-F-UML ; ! "city"
 שװעסטער:שװעסטער N-F-NULL ; ! "sister"
@@ -965,6 +968,7 @@ LEXICON Adjectives
 גוט:גוט ADJ-NO-COMP ; ! "good"
 געבױרן:געבױרן ADJ-BARE ; ! "born"
 גרױס:גרױס ADJ-UML ; ! "big"
+היסטאָריש:היסטאָריש ADJ-NO-COMP ; ! "historical" FIXME: CHECK NO-COMP?
 הױפּט:הױפּט ADJ-NO-COMP ; ! "head, main"
 יונג:יונג ADJ-UML ; ! "young"
 פּאָפּולער:פּאָפּולער ADJ ; ! "popular"
@@ -1017,15 +1021,15 @@ LEXICON Numerals
 
 
 אײנס:ערשט NUM-ORD-ADJ ;
-צװײ:צװײט NUM-ORD ;
-דרײַ:דריט NUM-ORD ;
-פֿיר:פֿערט NUM-ORD ;
-פֿינף:פֿינפֿט NUM-ORD ;
-זעקס:זעקסט NUM-ORD ;
-זיבן:זיבעט NUM-ORD ;
-אַכט:אַכט NUM-ORD ;
-נײַן:נײַנט NUM-ORD ;
-צען:צענט NUM-ORD ;
+צװײ:צװײט NUM-ORD-ADJ ;
+דרײַ:דריט NUM-ORD-ADJ ;
+פֿיר:פֿערט NUM-ORD-ADJ ;
+פֿינף:פֿינפֿט NUM-ORD-ADJ ;
+זעקס:זעקסט NUM-ORD-ADJ ;
+זיבן:זיבעט NUM-ORD-ADJ ;
+אַכט:אַכט NUM-ORD-ADJ ;
+נײַן:נײַנט NUM-ORD-ADJ ;
+צען:צענט NUM-ORD-ADJ ;
 
 LEXICON Titles
 
