@@ -18,6 +18,7 @@ Multichar_Symbols
 %<cnjadv%> ! Conjunctive adverb
 %<np%>   ! Proper noun
 %<title%>  ! title
+%<num%>  ! Numeral
 
 ! types of pronouns, determiners, and adjectives
 %<pers%> ! personal
@@ -80,11 +81,21 @@ Multichar_Symbols
 %<lpar%>      ! Parenthetical marker (left hand side)
 %<ltr%>       ! Letter
 
+! Misc
+
+%<ord%>       ! Ordinal
+
 ! Escaped characters
 
 %>       ! morpheme boundary
 %.
 %,
+
+№
+%-
+%  
+%+
+%−
 
 %{ь%}    ! used for umlaut of ~previous vowel for verbs
 %{ь2%}   ! used for umlaut of ~previous vowel for adjectives
@@ -145,6 +156,111 @@ Adjectives ;
 ProperNouns ;
 Titles ;
 Numerals ;
+Digits ;
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!==============================================================================!
+!
+!                               N U M E R A L S
+!
+!    WARNING: This section should not be modified without consultation.
+!             Test cases are not yet in dev/numerals.
+!==============================================================================!
+
+LEXICON SQRD
+! This lexicon includes common ways of writing squared, cubed etc.
+
+²%<num%>:2 # ;  ! Dir/LR
+³%<num%>:3 # ;  ! Dir/LR
+²%<num%>:² # ;
+³%<num%>:³ # ;
+%<num%>: # ;
+
+LEXICON NUM-DIGIT
+
+%<num%>: # ;
+
+! FIXME: find some way to make these generate!
+%<num%>%<ord%>:%>סט ADJ-INFL-ENDINGS ; ! Dir/LR
+%<num%>%<ord%>:%>ט ADJ-INFL-ENDINGS ;  ! Dir/LR
+
+%<num%>%<percent%>:%% # ;
+
+°С%<num%>:°С # ;
+°С%<num%>:ºС # ; ! Dir/LR
+°С%<num%>:С # ; ! Dir/LR
+
+°%<num%>:° # ; ! Dir/LR
+
+
+! Measurement units
+
+ק%"מ:ק%"מ SQRD ;  ! "kilometres"
+                ! FIXME: add more
+
+LEXICON LASTDIGIT
+
+1:1                     NUM-DIGIT ; !
+2:2                     NUM-DIGIT ; !
+3:3                     NUM-DIGIT ; !
+4:4                     NUM-DIGIT ; !
+5:5                     NUM-DIGIT ; !
+6:6                     NUM-DIGIT ; !
+7:7                     NUM-DIGIT ; !
+8:8                     NUM-DIGIT ; !
+9:9                     NUM-DIGIT ; !
+
+LEXICON LASTDIGIT-REST
+
+1%0:1%0                 NUM-DIGIT ; !
+2%0:2%0                 NUM-DIGIT ; !
+3%0:3%0                 NUM-DIGIT ; !
+4%0:4%0                 NUM-DIGIT ; !
+5%0:5%0                 NUM-DIGIT ; !
+6%0:6%0                 NUM-DIGIT ; !
+7%0:7%0                 NUM-DIGIT ; !
+8%0:8%0                 NUM-DIGIT ; !
+9%0:9%0                 NUM-DIGIT ; !
+
+LEXICON POWERS
+
+%0%0:%0%0               NUM-DIGIT ; !
+%0%0%0:%0%0%0           ִNUM-DIGIT ; !
+
+LEXICON LOOP
+
+%,:%, DIGITLEX ;
+%.:%. DIGITLEX ;
+%,:%, LASTDIGIT ;
+%.:%. LASTDIGIT ;
+%,:%, LASTDIGIT-REST ;
+%.:%. LASTDIGIT-REST ;
+%,:%, POWERS ;
+%.:%. POWERS ;
+      DIGITLEX ;
+      LASTDIGIT ;
+      LASTDIGIT-REST ;
+      POWERS ;
+
+LEXICON DIGITLEX
+
+%0:%0 LOOP ;
+1:1   LOOP ;
+2:2   LOOP ;
+3:3   LOOP ;
+4:4   LOOP ;
+5:5   LOOP ;
+6:6   LOOP ;
+7:7   LOOP ;
+8:8   LOOP ;
+9:9   LOOP ;
+
+!==============================================================================!
+!          N U M E R A L     L E X I C O N     E N D S     H E R E
+!==============================================================================!
+
 
 
 !!! Format for noun lexica is N-[gender]-[class]
@@ -763,7 +879,7 @@ LEXICON Prepositions
 לױט:לױט PREP ; ! "according to"
 מיט:מיט PREP-EN ; ! "with"
 נאָך:נאָך PREP-EN ; ! "after"
-פֿאַר:פֿאַר PREP-EN ; ! "for"
+פֿאַר:פֿאַר PREP-EN ; ! "for, per"
 פֿון:פֿון PREP-EN ; ! "of, from"
 צו:צו PREP-EN ; ! "to"
 צוליב:צוליב PREP ; ! "because of"
@@ -1077,7 +1193,43 @@ LEXICON Titles
 LEXICON Punctuation
 
 %.%<sent%>:%. # ;
-,%<cm%>:%, # ;
+%.%.%<sent%>:%.%. # ;
+%.%.%.%<sent%>:%.%.%. # ;
+…%<sent%>:… # ; 
+%;%<sent%>:%; # ;
+%:%<sent%>:%: # ;
+%!%<sent%>:%! # ;
+%-%-%<guio%>:%-%- # ;
+%-%<guio%>:%- # ;
+%−%<guio%>:%− # ; 
+%—%<guio%>:%— # ;
+%–%<guio%>:%– # ;
+,%<cm%>:, # ;
+%?%<sent%>:%? # ;
+%'%<apos%>:%' # ;
+%"%<quot%>:%" # ;
+%«%<lquot%>:%« # ;
+%»%<rquot%>:%» # ;
+%”%<rquot%>:%” # ;
+%“%<lquot%>:%“ # ;
+%(%<lpar%>:%( # ;
+%]%<rpar%>:%] # ;
+%[%<lpar%>:%[ # ;
+%)%<rpar%>:%) # ;
+%\%<sent%>:%\ # ;
+%/%<sent%>:%/ # ;
+
+
+LEXICON Digits ! Use/Circ
+
+%0:%0 NUM ;  ! Use/Circ
+№:№ DIGITLEX ;  ! Use/Circ
+№% :№%  DIGITLEX ;  ! Use/Circ
+DIGITLEX ; ! Use/Circ
+<[%- | %− | %+ ]> DIGITLEX ; ! Use/Circ
+LASTDIGIT ; ! Use/Circ
+LASTDIGIT-REST ; ! Use/Circ
+
 
 
 ! Resources:
