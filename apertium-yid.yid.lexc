@@ -1009,16 +1009,35 @@ LEXICON Numerals
 
 אײנס:אײנס NUM ;  ! FIXME: counting 1
 אײן:אײן NUM ;    ! FIXME: number one; also TODO: inflected forms of אײן
-צװײ:צװײ NUM ;
-דרײַ:דרײַ NUM ;
-פֿיר:פֿיר NUM ;
-פֿינף:פֿינף NUM ;
-זעקס:זעקס NUM ;
-זיבן:זיבן NUM ;
-אַכט:אַכט NUM ;
-נײַן:נײַן NUM ;
-צען:צען NUM ;
-
+צװײ:צװײ NUM ;         ! "two"
+דרײַ:דרײַ NUM ;         ! "three"
+פֿיר:פֿיר NUM ;         ! "four"
+פֿינף:פֿינף NUM ;       ! "five"
+זעקס:זעקס NUM ;       ! "six"
+זיבן:זיבן NUM ;       ! "seven"
+אַכט:אַכט NUM ;         ! "eight"
+נײַן:נײַן NUM ;         ! "nine"
+צען:צען NUM ;         ! "ten"
+עלף:עלף NUM ;         ! "eleven"
+צװעלף:צװעלף NUM ;     ! "twelve"
+דרײַצן:דרײַצן NUM ;     ! "thirteen"
+פֿערצן:פֿערצן NUM ;     ! "fourteen"
+פֿופֿצן:פֿופֿצן NUM ;     ! "fifteen"
+זעכצן:זעכצן NUM ;     ! "sixteen"
+זיבעצן:זיבעצן NUM ;   ! "seventeen"
+אַכצן:אַכצן NUM ;       ! "eighteen"
+נײַנצן:נײַנצן NUM ;     ! "nineteen"
+צװאַנציק:צװאַנציק NUM ; ! "twenty"
+דרײַסיק:דרײַסיק NUM ;   ! "thirty"
+פֿערציק:פֿערציק NUM ;   ! "forty"
+פֿופֿציק:פֿופֿציק NUM ;   ! "fifty"
+זעכציק:זעכציק NUM ;   ! "sixty"
+זיבעציק:זיבעציק NUM ; ! "seventy"
+אַכציק:אַכציק NUM ;     ! "eighty"
+נײַנציק:נײַנציק NUM ;   ! "ninety"
+הונדערט:הונדערט NUM ; ! "hundred"
+טויזנט:טויזנט NUM ;   ! "thousand"    ! FIXME: plural טױזנטער
+מיליאָן:מיליאָן NUM ;   ! "million"     ! FIXME: plural מיליאָנען
 
 אײנס:ערשט NUM-ORD-ADJ ;
 צװײ:צװײט NUM-ORD-ADJ ;
@@ -1029,7 +1048,26 @@ LEXICON Numerals
 זיבן:זיבעט NUM-ORD-ADJ ;
 אַכט:אַכט NUM-ORD-ADJ ;
 נײַן:נײַנט NUM-ORD-ADJ ;
-צען:צענט NUM-ORD-ADJ ;
+צען:צענט NUM-ORD-ADJ ;             ! "tenth"
+עלף:עלפֿט NUM-ORD-ADJ ;             ! "eleventh"
+צװעלף:צוועלפֿט NUM-ORD-ADJ ;        ! "twelfth"
+דרײַצן:דרײַצנט NUM-ORD-ADJ ;         ! "thirteenth"
+פֿערצן:פֿערצנט NUM-ORD-ADJ ;         ! "fourteenth"
+פֿופֿצן:פֿופֿצנט NUM-ORD-ADJ ;         ! "fifteenth"
+זעכצן:זעכצנט NUM-ORD-ADJ ;         ! "sixteenth"
+זיבעצן:זיבעצנט NUM-ORD-ADJ ;       ! "seventeenth"
+אַכצן:אַכצנט NUM-ORD-ADJ ;           ! "eighteenth"
+נײַנצן:נײַנצנט NUM-ORD-ADJ ;         ! "nineteenth"
+צװאַנציק:צװאַנציקסט NUM-ORD-ADJ ;    ! "twentieth"
+דרײַסיק:דרײַסיקסט NUM-ORD-ADJ ;      ! "thirtieth"
+פֿערציק:פֿערציקסט NUM-ORD-ADJ ;      ! "fortieth"
+פֿופֿציק:פֿופֿציקסט NUM-ORD-ADJ ;      ! "fiftieth"
+זעכציק:זעכציקסט NUM-ORD-ADJ ;      ! "sixtieth"
+זיבעציק:זיבעציקסט NUM-ORD-ADJ ;    ! "seventieth"
+אַכציק:אַכציקסט NUM-ORD-ADJ ;        ! "eightieth"
+נײַנציק:נײַנציקסט NUM-ORD-ADJ ;      ! "ninetieth"
+הונדערט:הונדערטסט NUM-ORD-ADJ ;    ! "hundredth"
+טויזנט:טויזנטסט NUM-ORD-ADJ ;      ! "thousandth"
 
 LEXICON Titles
 
