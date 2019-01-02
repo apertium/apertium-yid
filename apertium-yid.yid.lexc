@@ -156,7 +156,7 @@ Adjectives ;
 ProperNouns ;
 Titles ;
 Numerals ;
-Digits ;
+Digits ;     ! Use/Circ
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -468,6 +468,24 @@ LEXICON V-STRONG-7
 
 V-COMMON ;
 %<v%>%<pp%>%[%+pp%]:%>%{ע%}ן # ;
+
+LEXICON V-GEYN-GEY
+
+%<v%>: V-COMMON-INF ;
+
+%<v%>%<pres%>%<p1%>%<sg%>: V-FINAL-PARTICLE ;
+%<v%>%<pres%>%<p2%>%<sg%>:%>סט V-FINAL-PARTICLE ;
+%<v%>%<pres%>%<p3%>%<sg%>:%>ט V-FINAL-PARTICLE ;
+%<v%>%<pres%>%<p2%>%<pl%>:%>ט V-FINAL-PARTICLE ;
+
+%<v%>: V-COMMON-IMP ;
+
+LEXICON V-GEYN-GEYE
+
+%<v%>%<pres%>%<p1%>%<pl%>:%>%{ע%}ן V-FINAL-PARTICLE ;
+%<v%>%<pres%>%<p3%>%<pl%>:%>%{ע%}ן V-FINAL-PARTICLE ;
+
+%<v%>: V-COMMON-PPRS ;
 
 LEXICON V-TON-TU
 
@@ -1015,6 +1033,11 @@ VerbStems ; ! other forms
 
 LEXICON IrregularVerbs
 
+אָנטאָן%[√on%]:טאָ V-TON-TO ; ! "put on clothes"
+אָנטאָן%[√on%]:טו V-TON-TU ; ! "put on clothes"
+טאָן:טאָ V-TON-TO ; ! "do"
+טאָן:טו V-TON-TU ; ! "do"
+
 זײַן:זײַ V-ZAYN-ZAY ;
 זײַן:בי V-ZAYN-BI ;
 זײַן:איז V-ZAYN-IZ ;
@@ -1024,6 +1047,11 @@ LEXICON IrregularVerbs
 האָבן:האָב V-HOBN-HOB ;
 האָבן:האָ V-HOBN-HO ;
 האָבן:האַ V-HOBN-HA ;
+
+גײן:גאַנג V-STRONG-IRREG-PP ; ! "go"
+גײן:גײ V-GEYN-GEY ;          ! "go"
+גײן:גײע V-GEYN-GEYE ;        ! "go"
+
 
 LEXICON Auxiliaries
 
@@ -1046,8 +1074,6 @@ Auxiliaries ;
 אַרבעטן:אַרבעט V-REG ; ! "work"
 אָנהײבן%[√on%]:הױב V-STRONG-IRREG-PP ; ! "begin"
 אָנהײבן%[√on%]:הײב V-NOPP ; ! "begin"
-אָנטאָן%[√on%]:טאָ V-TON-TO ; ! "put on clothes"
-אָנטאָן%[√on%]:טו V-TON-TU ; ! "put on clothes"
 בּעטן:בּעט V-STRONG-7 ; ! "ask"
 באַקומען:באַקום V-REG-NOPREF ; ! "receive, acquire"
 בלײַבן:בליב V-STRONG-IRREG-PP ; ! "stay"
@@ -1057,8 +1083,6 @@ Auxiliaries ;
 דאַרפֿן:דאַרף V-REG ; ! "need, require"
 הײסן:הײס V-STRONG-7 ; ! "be called"
 זאָגן:זאָג V-REG ; ! "say"
-טאָן:טאָ V-TON-TO ; ! "do"
-טאָן:טו V-TON-TU ; ! "do"
 לעבן:לעב V-REG ; ! "live"
 מאַכן:מאַך V-REG ; ! "make"
 נעמען:נום V-STRONG-IRREG-PP ; ! "took"
