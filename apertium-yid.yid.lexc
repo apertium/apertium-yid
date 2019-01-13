@@ -455,11 +455,11 @@ LEXICON V-REG-NOPREF
 V-COMMON ;
 %<v%>%<pp%>:%>ט V-INITIAL-PARTICLE ;
 
-LEXICON V-NOPP
+LEXICON V-STRONG-NOPP
 
 V-COMMON ;
 
-LEXICON V-STRONG-IRREG-PP
+LEXICON V-STRONG-PP-ONLY
 
 %<v%>%<pp%>%[%+pp%]:%>%{ע%}ן V-INITIAL-PARTICLE ;
 
@@ -617,6 +617,10 @@ PREP ;
 LEXICON PREP
 
 %<pr%>: # ;
+
+LEXICON PRON-IND
+
+%<prn%>%<ind%>: # ;
 
 LEXICON PRON-P1-SG
 איך%<prn%>%<pers%>%<p1%>%<sg%>%<nom%>:איך # ;
@@ -950,6 +954,12 @@ PRON-P3-PL ;
 
 װעלך:װעלך PRON-ITG ; ! "which one (?)"  FIXME: CHECK
 
+גאָרנישט:גאָרנישט PRON-IND ;  ! "nothing"
+גאָרנישט:גאָרניט PRON-IND ;   ! Dir/LR
+אַלץ:אַלץ PRON-IND ;          ! "everything"
+עפּעס:עפּעס PRON-IND ;        ! "something"
+
+
 LEXICON NounRoot
 
 אַפּריל:אַפּריל N-M-N ; ! "April"
@@ -1020,6 +1030,11 @@ LEXICON NounRoot
 װעג:װעג N-M-N ; ! "way"
 װעלט:װעלט N-F-N ; ! "world"
 
+!FIXME: how to deal with words like the following (compounds, plural on first word)
+!בית החיים   ! "cemetery"
+!בית הקברות  ! "cemetery"
+!בית עולם    ! "cemetery"
+!בית עלמין   ! "cemetery"
 
 
 LEXICON VerbRoot
@@ -1048,7 +1063,7 @@ LEXICON IrregularVerbs
 האָבן:האָ V-HOBN-HO ;
 האָבן:האַ V-HOBN-HA ;
 
-גײן:גאַנג V-STRONG-IRREG-PP ; ! "go"
+גײן:גאַנג V-STRONG-PP-ONLY ; ! "go"
 גײן:גײ V-GEYN-GEY ;          ! "go"
 גײן:גײע V-GEYN-GEYE ;        ! "go"
 
@@ -1072,33 +1087,33 @@ IrregularVerbs ;
 Auxiliaries ; 
 
 אַרבעטן:אַרבעט V-REG ; ! "work"
-אָנהײבן%[√on%]:הױב V-STRONG-IRREG-PP ; ! "begin"
-אָנהײבן%[√on%]:הײב V-NOPP ; ! "begin"
+אָנהײבן%[√on%]:הױב V-STRONG-PP-ONLY ; ! "begin"
+אָנהײבן%[√on%]:הײב V-STRONG-NOPP ; ! "begin"
 בּעטן:בּעט V-STRONG-7 ; ! "ask"
 באַקומען:באַקום V-REG-NOPREF ; ! "receive, acquire"
-בלײַבן:בליב V-STRONG-IRREG-PP ; ! "stay"
-בלײַבן:בלײַב V-NOPP ; ! "stay"
-געפֿינען:געפֿין V-NOPP ; ! "find"
-געפֿינען:פֿון V-STRONG-IRREG-PP ; ! "find"
+בלײַבן:בליב V-STRONG-PP-ONLY ; ! "stay"
+בלײַבן:בלײַב V-STRONG-NOPP ; ! "stay"
+געפֿינען:געפֿין V-STRONG-NOPP ; ! "find"
+געפֿינען:פֿון V-STRONG-PP-ONLY ; ! "find"
 דאַרפֿן:דאַרף V-REG ; ! "need, require"
 הײסן:הײס V-STRONG-7 ; ! "be called"
 זאָגן:זאָג V-REG ; ! "say"
 לעבן:לעב V-REG ; ! "live"
 מאַכן:מאַך V-REG ; ! "make"
-נעמען:נום V-STRONG-IRREG-PP ; ! "took"
-נעמען:נעם V-NOPP ; ! "take"
-עסן:געס V-STRONG-IRREG-PP ; ! "eat"
-עסן:עס V-NOPP ; ! "eat"
+נעמען:נום V-STRONG-PP-ONLY ; ! "took"
+נעמען:נעם V-STRONG-NOPP ; ! "take"
+עסן:געס V-STRONG-PP-ONLY ; ! "eat"
+עסן:עס V-STRONG-NOPP ; ! "eat"
 פֿאַרלירן:פֿאַרליר V-REG-NOPREF ; ! "lose"
 פֿאָרן:פֿאָר V-STRONG-7 ; ! "ride, drive, travel by animal/vehicle"
 קומען:קום V-STRONG-7 ; ! "come"
 קענען:קענ V-REG ; ! "know"
 קױפֿן:קױפֿ V-REG ; ! "buy"
 רעדן:רעד V-REG ; ! "speak"
-שרײַבן:שריב V-STRONG-IRREG-PP ; ! "write"
-שרײַבן:שרײַב V-NOPP ; ! "write"
-װערן:װאָר V-STRONG-IRREG-PP ; ! "become"
-װערן:װער V-NOPP ; ! "become"
+שרײַבן:שריב V-STRONG-PP-ONLY ; ! "write"
+שרײַבן:שרײַב V-STRONG-NOPP ; ! "write"
+װערן:װאָר V-STRONG-PP-ONLY ; ! "become"
+װערן:װער V-STRONG-NOPP ; ! "become"
 
 LEXICON Adjectives
 
@@ -1116,6 +1131,7 @@ LEXICON Adjectives
 שלעכט:ערג ADJ-IRREG-COMP ; ! "worse/worst"
 שלעכט:שלעכט ADJ-NO-COMP ; ! "bad"
 שײן:שײן ADJ-UML ; ! "beautiful"
+בּאַקאַנט:בּאַקאַנט ADJ-NO-COMP ; ! "well known" FIXME: CHECK NO-COMP?
 
 LEXICON ProperNouns
 
@@ -1124,6 +1140,7 @@ LEXICON ProperNouns
 דײַטשלאַנד:דײַטשלאַנד NP-TOP ; ! "Germany"
 ירושלים:ירושלים NP-TOP ; ! "Jerusalem"
 ישראל:ישראל NP-TOP ; ! "Israel"
+ארץ% ישראל:ארץ% ישראל NP-TOP ; ! "Land of Israel"  ! FIXME: Maybe just N?
 לאָס% אַנדזשעלעס:לאָס% אַנדזשעלעס NP-TOP ; ! "Los Angeles"
 ניו% יאָרק:ניו% יאָרק NP-TOP ; ! "New York"
 ניו% יאָרק:ניו%-יאָרק NP-TOP ; ! "New York" ! Dir/LR
@@ -1213,6 +1230,7 @@ LEXICON Titles
 
 הרבֿ%<title%>:הרבֿ # ; ! "rabbi"
 רב%<title%>:רב # ; ! "reb (mister)"
+מרת%<title%>:מרת # ; ! "Mrs."
 
 LEXICON Punctuation
 
