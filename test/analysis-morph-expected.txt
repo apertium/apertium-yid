@@ -1,0 +1,12 @@
+[KMCvFVt9t4sA#0] ^יינגערע/יונג<adj><comp><attr><f><sg><acc>/יונג<adj><comp><attr><f><sg><nom>/יונג<adj><comp><attr><mfn><pl><acc>/יונג<adj><comp><attr><mfn><pl><nom>/יונג<adj><comp><attr><mfn><pl><dat>/יונג<adj><comp><attr><def><nt><sg><acc>/יונג<adj><comp><attr><def><nt><sg><nom>$
+[/KMCvFVt9t4sA]
+[UMNPKF018npj#0] ^שט/*שט$^רקערער/*רקערער$
+[/UMNPKF018npj]
+[bOxKfh6fU75b#0] ^מײנע/מ<>ן<det><pos><attr><mfn><pl><acc>/מ<>ן<det><pos><attr><mfn><pl><nom>/מ<>ן<det><pos><attr><mfn><pl><dat>/מ<>ן<det><pos><pred><mfn><pl><acc>/מ<>ן<det><pos><pred><mfn><pl><nom>/מ<>ן<det><pos><pred><mfn><pl><dat>/מ<>ן<det><pos><pred><f><sg><acc>/מ<>ן<det><pos><pred><f><sg><nom>$
+[/bOxKfh6fU75b]
+[kQvi18UNrVT6#0] ^פ/*פ$^טערס/*טערס$
+[/kQvi18UNrVT6]
+[tJNYlMjOFr3m#0] ^…/…<sent>$
+[/tJNYlMjOFr3m]
+[y_s378XYO88P#0] ^בעסט/גוט<adj><sup><pred>/גוט<adj><sup><pred>/גוט<adj><sup><attr><ind><nt><sg><acc>/גוט<adj><sup><attr><ind><nt><sg><nom>/גוט<adj><sup><attr><ind><nt><sg><dat>/גוט<adj><sup><attr><ind><nt><sg><acc>/גוט<adj><sup><attr><ind><nt><sg><nom>/גוט<adj><sup><attr><ind><nt><sg><dat>$
+[/y_s378XYO88P]
