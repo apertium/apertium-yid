@@ -1,0 +1,252 @@
+# Morphological Transducer for Yiddish
+
+# Part of speech categories
+# <n>      # Noun
+# <v>      # Verb
+# <adj>    # Adjective
+# <num>    # Numeral
+
+# <sent>   # Sentence-ending punctuation
+# <guio>   # Hyphen
+# <cm>     # Comma
+# <apos>   # Apostrophe
+# <quot>   # Quotation mark
+# <lquot>  # Left quotation mark
+# <rquot>  # Right quotation mark
+# <lpar>   # Left parenthesis
+# <rpar>   # Right parenthesis
+
+# Number morphology
+# <pl>     # Plural
+# <sg>     # Singular
+# <du>     # Dual
+
+# Other symbols
+# >        # Morpheme boundary
+
+###############################################################################
+###                       M O R P H O T A C T I C S                         ###
+###############################################################################
+
+PATTERNS
+
+Nouns
+Numbers
+Number
+Punctuation
+
+
+PATTERN Determiners
+
+DetRoot(1) [ <det>: ] DetRoot(2)
+
+PATTERN Nouns
+
+# Simple nouns (sg and pl forms only)
+NounRoot(1) [<n>:] NounRoot(3) [<sg>:]              # singular
+NounRoot(1):NounRoot(2) [<n>:] NounRoot(3) [<pl>:]  # plural
+
+
+PATTERN Numbers
+
+NumRoot [<num>:]
+
+###############################################################################
+###                          L E X I C O N                                  ###
+###############################################################################
+
+LEXICON NounRoot(3)
+
+# Singular                 Plural                  Gender        Gloss
+אַפּריל:אַפּריל                :אַפּרילן                 <m>:          # "April"
+אַרבעט:אַרבעט                :אַרבעטן                 <f>:          # "work; job"
+אַרבעט:אַרבעט                :אַרבעטס                 <f>:          # "work; job"  #Dir/LR
+אָקטאָבער:אָקטאָבער            S                       <m>:          # "October"
+אױגוסט:אױגוסט              N                       <m>:          # "August" CHECK: PL in N?
+אײַזנבאַן:אײַזנבאַן            N                       <F>:          # "railroad"
+בּאַן:בּאַן            N                       <F>:          # "train, railroad"
+בּאַרג:בּאַרג            UML                       <M>:          # "mountain"
+בּױם:בּ%{ױ%}ם            UML_ER                       <M>:          # "tree" plural with ײ
+באַפֿעלקערונג:באַפֿעלקערונג            N                       <F>:          # "population"
+בוך:בוך            UML_ER                       <N>:          # "book"
+געלט:געלט            UML_ER                       <N>:          # "money"  NOTE: no umlaut [possible]
+געשיכטע:געשיכטע            S                       <F>:          # "history"
+דעצעמבער:דעצעמבער            S                       <M>:          # "December"
+דעצעמבער:דעצעמבער            S                       <M>:          # "December"
+דרום:דרום            NOPL                       <M>:          # "south"
+הימל:הימל            N                       <M>:          # "heaven"
+היסטאָריע:היסטאָריע            S                       <F>:          # "history"
+הױז:הױז            UML_ER                       <N>:          # "house" plural with ײַ
+זון:זון            N                       <F>:          # "sun"
+זון:זון            UML                       <M>:          # "son"
+חסיד:חסיד            HEB                       <M>:          # "khosid (Hassid)"
+חתונה:חתונ            HEB                       <F>:          # "wedding"
+טאָג:טאָג            UML                       <M>:          # "day"
+טאָכטער:טאָכטער            UML                       <F>:          # "daughter"
+טײל:טײל            N                       <F>:          # "part"
+יאַנואַר:יאַנואַר            N                       <M>:          # "January"
+יאָר:יאָר            N                       <M>:          # "year"
+יולי:יולי            S                       <M>:          # "July"
+יוני:יוני            S                       <M>:          # "June"
+ייִד:איד            N                       <M>:          # "Jew" ! Dir/LR
+ייִד:ייִד            N                       <M>:          # "Jew"
+ישיבה:ישיב            HEB                       <F>:          # "yeshiva"
+לאַן:לאַן            N                       <M>:          # "meadow"
+לאַנד:לאַנד            UML_ER                       <N>:          # "country, land"
+לעבן:לעבן            S                       <N>:          # "life"
+מאַרץ:מאַרץ            N                       <M>:          # "March"
+מזרח:מזרח            NOPL                       <M>:          # "east"
+מיטן:מיטן            S                       <M>:          # "middle"
+מלחמה:מלחמ            HEB                       <F>:          # "war"
+מענטש:מענטש            N                       <M>:          # "human; mentsh, gentleman"
+מערבֿ:מערבֿ            NOPL                       <M>:          # "west"
+מײַ:מײַ            N                       <N>:          # "May" CHECK: PL in N?
+נאָמען:נאָמען            UML                       <M>:          # "name"  ! FIXME: irreg alternative plural נעמענער
+נאָװעמבער:נאָװעמבער            S                       <M>:          # "November"
+סטאַנציע:סטאַנציע            S                       <F>:          # "station"
+סעפּטעמבער:סעפּטעמבער            S                       <M>:          # "September" CHECK: PL in S?
+ספֿר:ספֿר            HEB                       <M>:          # "seyfer (religious book)"
+פּאָיעזד:פּאָיעזד            N                       <M>:          # "train"
+פֿאָטער:פֿאָטער            S                       <M>:          # "father"
+פֿעברואַר:פֿעברואַר            N                       <M>:          # "February" CHECK: PL in N?
+פֿרײַנד:פֿרײַנד            NULL                       <M>:          # "friend"
+צוג:צוג            N                       <M>:          # "train"
+צפֿון:צפֿון            NOPL                       <M>:          # "north"
+צײַט:צײַט            N                       <F>:          # "time"
+קאַלענדאָר:קאַלענדאַר            N                       <M>:          # "calendar"
+קינד:קינד            UML_ER                       <N>:          # "child" (technically no umlaut)
+קריג:קריג            N                       <F>:          # "war"
+רבֿ:רבֿ            HEB_N                       <M>:          # "rov (rabbi)" (pl: rabonem)
+רבי:רבי            REBE                       <M>:          # "rebe (rabbi)"
+רעגירונג:רעגירונג            N                       <F>:          # "government"
+שטאַט:שטאַט            N                       <M>:          # "state"
+שטאָט:שטאָט            UML                       <F>:          # "city"
+שװעסטער:שװעסטער            NULL                       <F>:          # "sister"
+תּורה:תּורה            NOPL                       <F>:          # "Torah (Hebrew bible)"
+װאַסער:װאַסער            N                       <N>:          # "water"
+װעג:װעג            N                       <M>:          # "way"
+װעלט:װעלט            N                       <F>:          # "world"
+
+!FIXME: how to deal with words like the following (compounds, plural on first word)
+!בית החיים   ! "cemetery"
+!בית הקברות  ! "cemetery"
+!בית עולם    ! "cemetery"
+!בית עלמין   ! "cemetery"
+
+
+LEXICON DetRoot(2)
+
+דער:דער      <def><m><nom>    # "the"
+דער:דעם      <def><m><acc>    # "the"
+דער:דעם      <def><m><dat>    # "the"
+דער:די       <def><f><nom>    # "the"
+דער:די       <def><f><acc>    # "the"
+דער:דער      <def><f><dat>    # "the"
+דער:דאָס      <def><nt><nom>   # "the"
+דער:דאָס      <def><nt><acc>   # "the"
+דער:דעם      <def><nt><dat>   # "the"
+אַ:אַ          <idf><sg>        # "a"
+אַ:אַן         <idf><sg>        # "an"   # Dir/LR
+קײן:קײן      <idf><sg>        # "a/an, no, any"
+
+#מײַן:מײַן DET-PERS-P1SG ;
+#דײַן:דײַן DET-PERS-P2SG ;
+#זײַן:זײַן DET-PERS-P3SGMN ;
+#איר:איר DET-PERS-P3SGF ;
+#אונדזער:אונדזער DET-PERS-P1PL ;
+#אײַער:אײַער DET-PERS-P2PL ;
+#זײער:זײער DET-PERS-P3PL ;
+
+#װעלך:װעלך DET-ITG ; ! "which"
+#אַלע:אַלע DET-QNT ; ! "all"
+#אַ% סך:אַ% סך DET-QNT ; ! "a lot"
+#אַ% סך:אַסאַך DET-QNT ; ! "a lot"
+#עטלעכע:עטלעכע DET-QNT ; ! "some (a few)"
+
+
+LEXICON NumRoot
+
+אײנס:אײנס        # FIXME: counting 1
+אײן:אײן          # FIXME: number one; also TODO: inflected forms of אײן
+צװײ:צװײ               # "two"
+דרײַ:דרײַ               # "three"
+פֿיר:פֿיר               # "four"
+פֿינף:פֿינף             # "five"
+זעקס:זעקס             # "six"
+זיבן:זיבן             # "seven"
+אַכט:אַכט               # "eight"
+נײַן:נײַן               # "nine"
+צען:צען               # "ten"
+עלף:עלף               # "eleven"
+צװעלף:צװעלף           # "twelve"
+דרײַצן:דרײַצן           # "thirteen"
+פֿערצן:פֿערצן           # "fourteen"
+פֿופֿצן:פֿופֿצן           # "fifteen"
+זעכצן:זעכצן           # "sixteen"
+זיבעצן:זיבעצן         # "seventeen"
+אַכצן:אַכצן             # "eighteen"
+נײַנצן:נײַנצן           # "nineteen"
+צװאַנציק:צװאַנציק       # "twenty"
+דרײַסיק:דרײַסיק         # "thirty"
+פֿערציק:פֿערציק         # "forty"
+פֿופֿציק:פֿופֿציק         # "fifty"
+זעכציק:זעכציק         # "sixty"
+זיבעציק:זיבעציק       # "seventy"
+אַכציק:אַכציק           # "eighty"
+נײַנציק:נײַנציק         # "ninety"
+הונדערט:הונדערט       # "hundred"
+טויזנט:טויזנט         # "thousand"    # FIXME: plural טױזנטער
+מיליאָן:מיליאָן         # "million"     # FIXME: plural מיליאָנען
+
+
+
+PATTERN Number
+Numeral [<num>:]
+
+LEXICON Numeral
+/([0123456789])+/
+/([0123456789])+[.,]([0123456789])+/
+
+LEXICON Punctuation
+
+᥅<sent>:᥅
+॥<sent>:॥
+᥄<sent>:᥄
+।<sent>:।
+᥀<sent>:᥀
+.<cm>:.
+
+.<cm>:.
+..<sent>:..
+...<sent>:...
+;<sent>:;
+\:<sent>:\:
+!<sent>:!
+-<guio>:-
+—<guio>:—
+,<cm>:,
+?<sent>:? 
+'<apos>:'
+"<quot>:"
+«<lquot>:«
+»<rquot>:»
+”<rquot>:”
+“<lquot>:“
+(<lpar>:(
+\]<rpar>:\]
+\[<lpar>:\[
+)<rpar>:)
+\\<sent>:\\
+\/<sent>:\/
+
+
+# Resources:
+# https://github.com/apertium/lexd/blob/master/Usage.md
+# https://wiki.apertium.org/wiki/List_of_symbols
+# https://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon
+# https://wiki.apertium.org/wiki/Lttoolbox_and_lexc
+# https://wiki.apertium.org/wiki/Apertium-specific_conventions_for_lexc
+# https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstHome
+# https://github.com/hfst/
+# https://wiki.apertium.org/wiki/Hfst
+
